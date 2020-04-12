@@ -1,0 +1,18 @@
+add_discipline "Uvod v programiraneto" mandatory 1
+add_discipline "OOP" mandatory 2
+add_discipline "DIS3" selective 1 5
+add_discipline "Deep learning" selective 1 15
+add_discipline "Sustezatelna matematika" selective 1 15
+add_discipline "Filosofiq" mandatory 1
+add_discipline "DSTR" mandatory 1
+add_discipline "Funkcionalno" mandatory 2
+add_program "Computer science" bachelor 4 50 2 "Uvod v programiraneto" "OOP" 30 
+add_program "Mathematics" bachelor 4 10 2 "Uvod v programiraneto" "Funkcionalno" 10
+add_program "Softuni" master 1 5  2 DSTR Filosofiq 10
+enroll 112 "Computer science" 1 Dimitar Dimitrov
+enroll 110 "Computer science" 1 Marin Georgiev
+enroll 113 Mathematics 3 Kiro Kirov
+enroll 200 Softuni 2 Pavel Popov
+enroll 201 Softuni 1 Hristo Shopov
+enroll 202 Softuni 3 Orlin Ognyanov
+enroll 111 Mathematics 2 Kiro Dimitrov
