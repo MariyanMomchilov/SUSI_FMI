@@ -133,7 +133,7 @@ void Susi::print(int fn) const
 {
     int i = _studentIndex(fn);
     assert(i > -1);
-    std::cout << susi_students[i];
+    susi_students[i].print();
 }
 
 void Susi::printall(const std::string &program_name, int year) const
@@ -141,7 +141,10 @@ void Susi::printall(const std::string &program_name, int year) const
     for (int i = 0; i < susi_students.size(); i++)
     {
         if (susi_students[i].getProgram().getName() == program_name && susi_students[i].getYear() == year)
-            std::cout << susi_students[i] << '\n';
+        {
+            susi_students[i].print();
+            std::cout << '\n';
+        }
     }
 }
 
@@ -237,6 +240,34 @@ void Susi::report(int fn) const
     {
         std::cout << izpiti[nevzeti_index[j]].getName() << " - " << susi_students[i].getGrade(nevzeti_index[j]) << std::endl;
     }
+}
+
+std::ostream &operator<<(std::ostream &os, const Susi &susi)
+{
+    os << susi.susi_disciplines;
+    os << susi.susi_programs;
+    os << susi.susi_students.size() << std::endl;
+    for (int i = 0; i < susi.susi_students.size(); i++)
+    {
+        os << susi.susi_students[i];
+    }
+    return os;
+}
+
+std::istream &operator>>(std::istream &is, Susi &susi)
+{
+    is >> susi.susi_disciplines;
+    is >> susi.susi_programs;
+    int stud_size;
+    is >> stud_size;
+    is.ignore();
+    for (int i = 0; i < stud_size; i++)
+    {
+        Student stud;
+        is >> stud;
+        susi.susi_students.push_back(stud);
+    }
+    return is;
 }
 
 /*

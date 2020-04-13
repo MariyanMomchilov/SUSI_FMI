@@ -270,6 +270,65 @@ TEST_CASE("sort: program then name")
     susi.protocol("A1");
 }
 
+TEST_CASE("stream")
+{
+    DisciplineContainer dc;
+    dc.addDiscipline(Discipline("Uvod v programiraneto", 0, 1, 5));
+    dc.addDiscipline(Discipline("Algebra1", 1, 3, 12));
+    dc.addDiscipline(Discipline("Deep learning", 1, 1, 10));
+    dc.addDiscipline(Discipline("OOP", 0, 2, 0));
+
+    fstream f("dc.txt", std::ios::out | std::ios::in | std::ios::app);
+
+    f << dc;
+    f.close();
+
+    f.open("dc.txt");
+    DisciplineContainer dc2;
+    f >> dc2;
+    for (int i = 0; i < dc2.size(); i++)
+    {
+        std::cout << dc2[i] << std::endl;
+    }
+
+    Program p1("Matematika", 0, 4, 50, 10);
+    p1.addDiscipline(Discipline("Uvod v programiraneto", 0, 1, 5));
+    p1.addDiscipline(Discipline("Algebra1", 0, 3, 12));
+    Program p2("Softuni", 1, 1, 30, 50);
+    p2.addDiscipline(Discipline("Analiz", 0, 1, 5));
+    p2.addDiscipline(Discipline("OOP", 1, 3, 12));
+    p2.addDiscipline(Discipline("Sistemen analiz", 0, 2, 3));
+    f.close();
+
+    ProgramContainer pc;
+    pc.addProgram(p1);
+    pc.addProgram(p2);
+    f.open("pc.txt", std::ios::out | std::ios::in | std::ios::app);
+    f << pc;
+    f.close();
+    f.open("pc.txt");
+    ProgramContainer pc2;
+    f >> pc2;
+    for (int i = 0; i < pc2.size(); i++)
+    {
+        std::cout << pc2[i] << '\n';
+    }
+    f.close();
+    Student Kiro("Kiro", "Roki", 1111, 0, 1, 2, p2);
+    Student Dimo("Dimo", "Dimitrov", 1133, 0, 2, 1, p1);
+    f.open("stud.txt", std::ios::out | std::ios::in | std::ios::app);
+    f << Kiro;
+    f << Dimo;
+    f.close();
+    f.open("stud.txt");
+    Student s1, s2;
+    f >> s1;
+    f >> s2;
+
+    std::cout << s1 << '\n'
+              << s2 << '\n';
+}
+
 int main()
 {
     doctest::Context().run();

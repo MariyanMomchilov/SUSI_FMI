@@ -1,0 +1,9 @@
+4
+Uvod v programiraneto
+0 1 5
+Algebra1
+1 3 12
+Deep learning
+1 1 10
+OOP
+0 2 0

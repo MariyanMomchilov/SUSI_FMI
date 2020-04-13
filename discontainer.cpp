@@ -45,3 +45,27 @@ Discipline DisciplineContainer::operator[](int i) const
     assert(i < disciplines.size());
     return disciplines[i];
 }
+
+std::ostream &operator<<(std::ostream &os, const DisciplineContainer &obj)
+{
+    os << obj.size() << std::endl;
+    for (int i = 0; i < obj.disciplines.size(); i++)
+    {
+        os << obj.disciplines[i];
+    }
+    return os;
+}
+
+std::istream &operator>>(std::istream &is, DisciplineContainer &obj)
+{
+    int size;
+    is >> size;
+    is.ignore();
+    for (int i = 0; i < size; i++)
+    {
+        Discipline d;
+        is >> d;
+        obj.addDiscipline(d);
+    }
+    return is;
+}

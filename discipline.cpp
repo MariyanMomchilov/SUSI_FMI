@@ -37,3 +37,22 @@ int Discipline::getCredits() const
 {
     return credits;
 }
+
+std::ostream &operator<<(std::ostream &os, const Discipline &obj)
+{
+    os << obj.name << std::endl;
+    os << obj.type << ' ';
+    os << obj.requiredCourse << ' ';
+    os << obj.credits << std::endl;
+    return os;
+}
+
+std::istream &operator>>(std::istream &is, Discipline &obj)
+{
+    getline(is, obj.name);
+    is >> obj.type;
+    is >> obj.requiredCourse;
+    is >> obj.credits;
+    is.ignore();
+    return is;
+}

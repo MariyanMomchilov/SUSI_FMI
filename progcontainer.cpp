@@ -58,3 +58,26 @@ Program ProgramContainer::operator[](int i) const
     assert(i < programs.size());
     return programs[i];
 }
+
+std::ostream &operator<<(std::ostream &os, const ProgramContainer &pc)
+{
+    os << pc.programs.size() << std::endl;
+    for (int i = 0; i < pc.programs.size(); i++)
+    {
+        os << pc.programs[i];
+    }
+    return os;
+}
+std::istream &operator>>(std::istream &is, ProgramContainer &pc)
+{
+    int size;
+    is >> size;
+    is.ignore();
+    for (int i = 0; i < size; i++)
+    {
+        Program p;
+        is >> p;
+        pc.programs.push_back(p);
+    }
+    return is;
+}

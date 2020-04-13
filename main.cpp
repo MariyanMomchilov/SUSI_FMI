@@ -1,12 +1,12 @@
 #include "includes/commands.h"
-/*#include "unimem.cpp"
+#include "unimem.cpp"
 #include "progcontainer.cpp"
 #include "discontainer.cpp"
 #include "discipline.cpp"
 #include "program.cpp"
 #include "student.cpp"
 #include "commands.cpp"
-#include "susi.cpp"*/
+#include "susi.cpp"
 
 int main()
 {

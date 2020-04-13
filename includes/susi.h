@@ -9,6 +9,8 @@ private:
     ProgramContainer susi_programs;
     std::vector<Student> susi_students;
     int _studentIndex(int fn) const;
+    friend std::ostream &operator<<(std::ostream &os, const Susi &susi);
+    friend std::istream &operator>>(std::istream &is, Susi &susi);
 
 public:
     Susi();
@@ -31,9 +33,8 @@ public:
     void addGrade(int fn, const std::string &course_name, int grade);
     void protocol(const std::string &course_name) const;
     void report(int fn) const;
-
     void sort(std::vector<Student> &) const;
-    
+
     ~Susi() = default;
 };
 

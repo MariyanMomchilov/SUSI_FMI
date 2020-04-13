@@ -19,5 +19,8 @@ public:
     std::string getFname() const;
     std::string getLname() const;
     int getFnumber() const;
+    void setFname(const std::string &);
+    void setLname(const std::string &);
+    void setFnumber(int);
 };
 #endif

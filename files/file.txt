@@ -1,0 +1,186 @@
+8
+Uvod v programiraneto
+0 1 0
+OOP
+0 2 0
+DIS3
+1 1 5
+Deep learning
+1 1 15
+Sustezatelna matematika
+1 1 15
+Filosofiq
+0 1 0
+DSTR
+0 1 0
+Funkcionalno
+0 2 0
+3
+Computer science
+0 4 50
+2
+Uvod v programiraneto
+0 1 0
+OOP
+0 2 0
+30
+Mathematics
+0 4 10
+2
+Uvod v programiraneto
+0 1 0
+Funkcionalno
+0 2 0
+10
+Softuni
+1 1 5
+2
+DSTR
+0 1 0
+Filosofiq
+0 1 0
+10
+Dimitar
+Dimitrov
+112 2 4 1
+Computer science
+0 4 50
+2
+Uvod v programiraneto
+0 1 0
+OOP
+0 2 0
+30
+
+4
+Uvod v programiraneto
+0 1 0
+OOP
+0 2 0
+Deep learning
+1 1 15
+Sustezatelna matematika
+1 1 15
+
+4
+ 5 6 5 4
+Marin
+Georgiev
+110 0 1 1
+Computer science
+0 4 50
+2
+Uvod v programiraneto
+0 1 0
+OOP
+0 2 0
+30
+
+2
+Uvod v programiraneto
+0 1 0
+OOP
+0 2 0
+
+2
+ 2 2
+Kiro
+Kirov
+113 0 1 3
+Mathematics
+0 4 10
+2
+Uvod v programiraneto
+0 1 0
+Funkcionalno
+0 2 0
+10
+
+2
+Uvod v programiraneto
+0 1 0
+Funkcionalno
+0 2 0
+
+2
+ 2 2
+Pavel
+Popov
+200 0 1 2
+Softuni
+1 1 5
+2
+DSTR
+0 1 0
+Filosofiq
+0 1 0
+10
+
+2
+DSTR
+0 1 0
+Filosofiq
+0 1 0
+
+2
+ 2 2
+Hristo
+Shopov
+201 0 1 1
+Softuni
+1 1 5
+2
+DSTR
+0 1 0
+Filosofiq
+0 1 0
+10
+
+2
+DSTR
+0 1 0
+Filosofiq
+0 1 0
+
+2
+ 2 2
+Orlin
+Ognyanov
+202 0 1 3
+Softuni
+1 1 5
+2
+DSTR
+0 1 0
+Filosofiq
+0 1 0
+10
+
+2
+DSTR
+0 1 0
+Filosofiq
+0 1 0
+
+2
+ 2 2
+Kiro
+Dimitrov
+111 0 1 2
+Mathematics
+0 4 10
+2
+Uvod v programiraneto
+0 1 0
+Funkcionalno
+0 2 0
+10
+
+2
+Uvod v programiraneto
+0 1 0
+Funkcionalno
+0 2 0
+
+2
+ 2 2

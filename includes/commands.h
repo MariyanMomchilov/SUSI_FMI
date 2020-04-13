@@ -16,7 +16,8 @@ public:
     Commands() = default;
     Commands(const std::string &) = delete;
     void process(std::string &);
-
+    void write();
+    void read();
     ~Commands() = default;
 };
 

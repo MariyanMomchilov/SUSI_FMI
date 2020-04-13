@@ -1,5 +1,3 @@
-#ifndef CMD_CPP
-#define CMD_CPP
 #include "includes/commands.h"
 
 std::string Commands::getNextCMD(std::string &str, int &i)
@@ -95,6 +93,15 @@ void Commands::_open(std::string &str, int &i)
     else if (parameter.length() != 0)
     {
         this->file.open(parameter, std::ios::out | std::ios::in | std::ios::app);
+        /*file.seekg(0, file.end);   // ?
+        int length = file.tellg(); // ?
+        file.seekg(0, file.beg);   // ?
+        if (length > 0)
+        {
+            std::cout << "Not empty" << std::endl;*/
+        read();
+        //}
+
         if (this->file.good())
             std::cout << "Successfuly opened " << parameter << std::endl;
     }
@@ -126,7 +133,7 @@ void Commands::process(std::string &command)
     }
     else if (next_cmd == "save")
     {
-        std::cout << "TO DO save" << '\n';
+        write();
     }
     else if (next_cmd == "saveas")
     {
@@ -260,4 +267,12 @@ void Commands::process(std::string &command)
         }
     }
 }
-#endif
+
+void Commands::write()
+{
+    file << system;
+}
+void Commands::read()
+{
+    file >> system;
+}

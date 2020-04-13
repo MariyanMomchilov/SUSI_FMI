@@ -10,6 +10,8 @@ private:
     int type;
     int requiredCourse;
     int credits;
+    friend std::ostream &operator<<(std::ostream &os, const Discipline &obj);
+    friend std::istream &operator>>(std::istream &is, Discipline &obj);
 
 public:
     enum Type

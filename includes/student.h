@@ -12,6 +12,8 @@ private:
     Program program;
     std::vector<Discipline> disciplines;
     std::vector<int> grades;
+    friend std::ostream &operator<<(std::ostream &os, const Student &s);
+    friend std::istream &operator>>(std::istream &is, Student &s);
 
 public:
     enum stat
@@ -46,6 +48,7 @@ public:
     void setGroup(int g);
     void addDisc(const Discipline &);
     void addGrade(const Discipline &, int);
+    void print() const;
 
     friend std::ostream &operator<<(std::ostream &, const Student &);
 };

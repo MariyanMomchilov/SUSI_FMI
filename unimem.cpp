@@ -34,3 +34,17 @@ int UniMember::getFnumber() const
 {
     return this->facN;
 }
+
+void UniMember::setLname(const std::string &ln)
+{
+    lName = ln;
+}
+
+void UniMember::setFname(const std::string &fn)
+{
+    fName = fn;
+}
+void UniMember::setFnumber(int fn)
+{
+    facN = fn;
+}

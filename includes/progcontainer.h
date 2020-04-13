@@ -8,6 +8,8 @@ class ProgramContainer
 {
 private:
     std::vector<Program> programs;
+    friend std::ostream &operator<<(std::ostream &os, const ProgramContainer &pc);
+    friend std::istream &operator>>(std::istream &is, ProgramContainer &pc);
 
 public:
     ProgramContainer() = default;

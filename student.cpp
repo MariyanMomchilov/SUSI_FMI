@@ -160,20 +160,81 @@ bool Student::canGraduate() const
     return false;
 }
 
+void Student::print() const
+{
+    std::cout << "Name: " << this->getFname() << " " << this->getLname() << '\n'
+              << "FN: " << this->getFnumber() << '\n'
+              << "Status: " << status << '\n'
+              << "Year: " << year << '\n'
+              << "Group: " << group << '\n'
+              << "Program: " << program.getName() << '\n'
+              << "Disciplines: " << '\n';
+
+    for (int i = 0; i < disciplines.size(); i++)
+    {
+        std::cout << disciplines[i].getName() << '\n';
+    }
+    std::cout << std::endl;
+}
+
 std::ostream &operator<<(std::ostream &os, const Student &s)
 {
-    os << "Name: " << s.getFname() << " " << s.getLname() << '\n'
-       << "FN: " << s.getFnumber() << '\n'
-       << "Status: " << s.status << '\n'
-       << "Year: " << s.year << '\n'
-       << "Group: " << s.group << '\n'
-       << "Program: " << s.program.getName() << '\n'
-       << "Disciplines: " << '\n';
-
+    os << s.getFname() << std::endl;
+    os << s.getLname() << std::endl;
+    os << s.getFnumber() << ' ';
+    os << s.status << ' ';
+    os << s.year << ' ';
+    os << s.group << std::endl;
+    os << s.program << std::endl;
+    os << s.disciplines.size() << std::endl;
     for (int i = 0; i < s.disciplines.size(); i++)
     {
-        os << s.disciplines[i].getName() << '\n';
+        os << s.disciplines[i];
+    }
+    os << std::endl;
+    os << s.grades.size() << std::endl;
+    for (int i = 0; i < s.grades.size(); i++)
+    {
+        os << ' ' << s.grades[i];
     }
     os << std::endl;
     return os;
+}
+
+std::istream &operator>>(std::istream &is, Student &s)
+{
+    std::string fname, lname;
+    int fn;
+    getline(is, fname);
+    getline(is, lname);
+    is >> fn;
+
+    s.setFname(fname);
+    s.setLname(lname);
+    s.setFnumber(fn);
+
+    is >> s.status;
+    is >> s.year;
+    is >> s.group;
+    is.ignore();
+    is >> s.program;
+    int disc_size;
+    is >> disc_size;
+    is.ignore();
+    for (int i = 0; i < disc_size; i++)
+    {
+        Discipline d;
+        is >> d;
+        s.disciplines.push_back(d);
+    }
+    int grade_size;
+    is >> grade_size;
+    int grade;
+    for (int i = 0; i < grade_size; i++)
+    {
+        is >> grade;
+        s.grades.push_back(grade);
+    }
+    is.ignore();
+    return is;
 }

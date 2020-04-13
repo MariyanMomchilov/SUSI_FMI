@@ -13,7 +13,9 @@ private:
     int yearsToGraduate;
     int capacity;
     std::vector<Discipline> disciplines;
-    int creditsToGraduate; //само от избираеми
+    int creditsToGraduate; //само от избираеми, задължителните им се присвоява 0 кредити
+    friend std::ostream &operator<<(std::ostream &os, const Program &prog);
+    friend std::istream &operator>>(std::istream &is, Program &prog);
 
 public:
     enum Type

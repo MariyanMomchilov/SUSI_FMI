@@ -8,6 +8,8 @@ class DisciplineContainer
 {
 private:
     std::vector<Discipline> disciplines;
+    friend std::ostream &operator<<(std::ostream &os, const DisciplineContainer &obj);
+    friend std::istream &operator>>(std::istream &is, DisciplineContainer &obj);
 
 public:
     DisciplineContainer() = default;
