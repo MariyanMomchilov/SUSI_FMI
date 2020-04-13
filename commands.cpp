@@ -93,14 +93,9 @@ void Commands::_open(std::string &str, int &i)
     else if (parameter.length() != 0)
     {
         this->file.open(parameter, std::ios::out | std::ios::in | std::ios::app);
-        /*file.seekg(0, file.end);   // ?
-        int length = file.tellg(); // ?
-        file.seekg(0, file.beg);   // ?
-        if (length > 0)
-        {
-            std::cout << "Not empty" << std::endl;*/
+        // TO DO: if clause for if file is empty(new), dont read()
         read();
-        //}
+        //
 
         if (this->file.good())
             std::cout << "Successfuly opened " << parameter << std::endl;
