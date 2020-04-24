@@ -95,7 +95,7 @@ void Susi::graduate(int fn)
     if (susi_students[i].canGraduate())
     {
         susi_students[i].setStatus(2); //graduate status = 2
-        std::cout << "Successful" << std::endl;
+        //std::cout << "Successful" << std::endl;
         return;
     }
     std::cout << "Unsuccessful" << std::endl;
@@ -126,17 +126,25 @@ void Susi::addGrade(int fn, const std::string &course_name, int grade)
 void Susi::interrupt(int fn)
 {
     int i = _studentIndex(fn);
-    assert(i > -1);
-    susi_students[i].setStatus(1);
-    std::cout << "Successful" << std::endl;
+    if (i != -1)
+    {
+        if (susi_students[i].getStatus() == 0)
+            susi_students[i].setStatus(1);
+    }
+    else
+        std::cout << "No such faculty number" << std::endl;
 }
 
 void Susi::resume(int fn)
 {
     int i = _studentIndex(fn);
-    assert(i > -1);
-    susi_students[i].setStatus(0);
-    std::cout << "Successful" << std::endl;
+    if (i != -1)
+    {
+        if (susi_students[i].getStatus() != 0)
+            susi_students[i].setStatus(0);
+    }
+    else
+        std::cout << "No such faculty number" << std::endl;
 }
 
 void Susi::print(int fn) const
@@ -166,9 +174,17 @@ void Susi::enrollin(int fn, const std::string &course_name)
         int di = susi_disciplines.indexDiscipline(course_name);
         if (di > -1)
         {
-            susi_students[i].addDisc(susi_disciplines[di]);
-            std::cout << "Successful" << '\n';
-            return;
+            if (susi_students[i].getYear() >= susi_disciplines[di].getRequiredCourse())
+            {
+                susi_students[i].addDisc(susi_disciplines[di]);
+                std::cout << "Successful" << '\n';
+                return;
+            }
+            else
+            {
+                std::cout << "Student is not allowed to enroll in this discipline" << '\n';
+                return;
+            }
         }
         std::cout << "No such discipline" << '\n';
     }

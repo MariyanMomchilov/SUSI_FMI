@@ -94,7 +94,7 @@ void Commands::_open(std::string &str, int &i)
     }
     else if (parameter.length() != 0)
     {
-        this->file.open(parameter, std::ios::out | std::ios::in | std::ios::app);
+        this->file.open(parameter, std::ios::out | std::ios::in);
         if (this->file.good())
             std::cout << "Successfuly opened " << parameter << std::endl;
 
@@ -138,11 +138,25 @@ void Commands::process(std::string &command)
     }
     else if (next_cmd == "save")
     {
-        write();
+        if (this->file.is_open())
+        {
+            this->file.seekp(0);
+            write();
+        }
     }
     else if (next_cmd == "saveas")
     {
-        std::cout << "TO DO saveas" << '\n';
+        std::string filename = getNextCMD(command, i);
+        std::ofstream newfile(filename);
+        write(newfile);
+        if (newfile.good())
+        {
+            std::cout << "Successful " << '\n';
+        }
+        else
+        {
+            std::cout << "Unsuccessful " << '\n';
+        }
     }
     else if (next_cmd == "help")
     {
@@ -280,4 +294,9 @@ void Commands::write()
 void Commands::read()
 {
     file >> system;
+}
+
+void Commands::write(std::ostream &os)
+{
+    os << system;
 }

@@ -18,6 +18,7 @@ public:
     void process(std::string &);
     void write();
     void read();
+    void write(std::ostream &is);
     ~Commands() = default;
 };
 

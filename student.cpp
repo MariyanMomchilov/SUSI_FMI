@@ -156,7 +156,7 @@ bool Student::canPass() const
 bool Student::canGraduate() const
 {
     int credits = 0;
-    if (year == program.getYearsToGraduate())
+    if (year == program.getYearsToGraduate() && this->status == 0)
     {
         for (int i = 0; i < disciplines.size(); i++)
         {
