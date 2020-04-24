@@ -42,8 +42,8 @@ void DisciplineContainer::removeDiscipline(const Discipline &discipline)
 
 Discipline DisciplineContainer::operator[](int i) const
 {
-    assert(i < disciplines.size());
-    return disciplines[i];
+    if (i < disciplines.size())
+        return disciplines[i];
 }
 
 std::ostream &operator<<(std::ostream &os, const DisciplineContainer &obj)

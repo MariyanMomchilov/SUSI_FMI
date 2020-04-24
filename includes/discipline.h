@@ -14,11 +14,11 @@ private:
     friend std::istream &operator>>(std::istream &is, Discipline &obj);
 
 public:
-    enum Type
+    /*enum Type
     {
         Mandatory = 0,
         Selective
-    };
+    };*/
 
     Discipline();
     Discipline(std::string, int, int, int);

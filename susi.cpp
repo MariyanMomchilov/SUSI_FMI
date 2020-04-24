@@ -13,7 +13,12 @@ void Susi::addToProgContainer(const Program &prog)
 Student Susi::getStudent(int fn) const
 {
     int i = _studentIndex(fn);
-    assert(i > -1);
+    if (i == -1)
+    {
+        std::cout << "No such student" << '\n';
+        return Student();
+    }
+
     return susi_students[i];
 }
 
@@ -51,7 +56,11 @@ int Susi::_studentIndex(int fn) const
 
 void Susi::enroll(int fn, const std::string &program_name, int group, const std::string &fname, const std::string &lname)
 {
-    assert(group > 0);
+    if (group < 0)
+    {
+        std::cout << "Group must be a positive number " << '\n';
+        return;
+    }
 
     if (_studentIndex(fn) != -1)
         std::cout << "Error, Student with this faculty number is already enrolled" << std::endl;
@@ -85,7 +94,7 @@ void Susi::graduate(int fn)
     int i = _studentIndex(fn);
     if (susi_students[i].canGraduate())
     {
-        susi_students[i].setStatus(Student::stat::Graduated);
+        susi_students[i].setStatus(2); //graduate status = 2
         std::cout << "Successful" << std::endl;
         return;
     }
@@ -95,19 +104,20 @@ void Susi::graduate(int fn)
 void Susi::addGrade(int fn, const std::string &course_name, int grade)
 {
     int i = _studentIndex(fn);
-    assert(i > -1);
-    if (susi_students[i].getStatus() == Student::stat::Dropout)
+    if (i > -1)
     {
-        std::cout << "This student dropped out" << '\n';
-        return;
-    }
-    for (int j = 0; j < susi_disciplines.size(); j++)
-    {
-        if (course_name == susi_disciplines[j].getName())
+        if (susi_students[i].getStatus() == 1)
         {
-            susi_students[i].addGrade(susi_disciplines[j], grade);
-            std::cout << "Successful" << std::endl;
+            std::cout << "This student dropped out" << '\n';
             return;
+        }
+        for (int j = 0; j < susi_disciplines.size(); j++)
+        {
+            if (course_name == susi_disciplines[j].getName())
+            {
+                susi_students[i].addGrade(susi_disciplines[j], grade);
+                return;
+            }
         }
     }
     std::cout << "Unsuccessful" << std::endl;
@@ -117,7 +127,7 @@ void Susi::interrupt(int fn)
 {
     int i = _studentIndex(fn);
     assert(i > -1);
-    susi_students[i].setStatus(Student::stat::Dropout);
+    susi_students[i].setStatus(1);
     std::cout << "Successful" << std::endl;
 }
 
@@ -125,7 +135,7 @@ void Susi::resume(int fn)
 {
     int i = _studentIndex(fn);
     assert(i > -1);
-    susi_students[i].setStatus(Student::stat::Active);
+    susi_students[i].setStatus(0);
     std::cout << "Successful" << std::endl;
 }
 
@@ -151,10 +161,19 @@ void Susi::printall(const std::string &program_name, int year) const
 void Susi::enrollin(int fn, const std::string &course_name)
 {
     int i = _studentIndex(fn);
-    assert(i > -1);
-    int di = susi_disciplines.indexDiscipline(course_name);
-    assert(di > -1);
-    susi_students[i].addDisc(susi_disciplines[di]);
+    if (i > -1)
+    {
+        int di = susi_disciplines.indexDiscipline(course_name);
+        if (di > -1)
+        {
+            susi_students[i].addDisc(susi_disciplines[di]);
+            std::cout << "Successful" << '\n';
+            return;
+        }
+        std::cout << "No such discipline" << '\n';
+    }
+    else
+        std::cout << "No such student" << '\n';
 }
 
 void Susi::sort(std::vector<Student> &vs) const
@@ -187,59 +206,65 @@ void Susi::sort(std::vector<Student> &vs) const
 void Susi::protocol(const std::string &course_name) const
 {
     int di = susi_disciplines.indexDiscipline(course_name);
-    assert(di > -1);
-    std::vector<Student> studentProt;
-    for (int i = 0; i < susi_students.size(); i++)
+    if (di > -1)
     {
-        if (susi_students[i].isEnrolled(susi_disciplines[di]))
+        std::vector<Student> studentProt;
+        for (int i = 0; i < susi_students.size(); i++)
         {
-            studentProt.push_back(susi_students[i]);
+            if (susi_students[i].isEnrolled(susi_disciplines[di]))
+            {
+                studentProt.push_back(susi_students[i]);
+            }
         }
-    }
 
-    Susi::sort(studentProt);
-    std::string currentProgramName = "";
-    for (int i = 0; i < studentProt.size(); i++)
-    {
-        if (currentProgramName != studentProt[i].getProgram().getName())
+        Susi::sort(studentProt);
+        std::string currentProgramName = "";
+        for (int i = 0; i < studentProt.size(); i++)
         {
-            currentProgramName = studentProt[i].getProgram().getName();
-            std::cout << "Protocol for program " << currentProgramName << std::endl;
+            if (currentProgramName != studentProt[i].getProgram().getName())
+            {
+                currentProgramName = studentProt[i].getProgram().getName();
+                std::cout << "Protocol for program " << currentProgramName << std::endl;
+            }
+            std::cout << "Name: " << studentProt[i].getFname() << " " << studentProt[i].getLname() << '\n'
+                      << "FN: " << studentProt[i].getFnumber() << '\n'
+                      << "Status: " << studentProt[i].getStatus() << '\n'
+                      << "Year: " << studentProt[i].getYear() << '\n'
+                      << "Group: " << studentProt[i].getGroup() << '\n';
+            //mqsto za ocenka po predmeta eventualno
         }
-        std::cout << "Name: " << studentProt[i].getFname() << " " << studentProt[i].getLname() << '\n'
-                  << "FN: " << studentProt[i].getFnumber() << '\n'
-                  << "Status: " << studentProt[i].getStatus() << '\n'
-                  << "Year: " << studentProt[i].getYear() << '\n'
-                  << "Group: " << studentProt[i].getGroup() << '\n';
-        //mqsto za ocenka po predmeta eventualno
     }
 }
 
 void Susi::report(int fn) const
 {
     int i = _studentIndex(fn);
-    assert(i > -1);
-    std::vector<Discipline> izpiti = susi_students[i].getDiscplines();
-    std::vector<int> nevzeti_index;
-    std::cout << "Average grade:" << susi_students[i].getAvgGrade() << '\n';
-    std::cout << "Passed:" << '\n';
-    for (int j = 0; j < izpiti.size(); j++)
+    if (i > -1)
     {
-        if (susi_students[i].getGrade(j) > 2)
+        std::vector<Discipline> izpiti = susi_students[i].getDiscplines();
+        std::vector<int> nevzeti_index;
+        std::cout << "Average grade:" << susi_students[i].getAvgGrade() << '\n';
+        std::cout << "Passed:" << '\n';
+        for (int j = 0; j < izpiti.size(); j++)
         {
-            std::cout << izpiti[j].getName() << " - " << susi_students[i].getGrade(j) << '\n';
+            if (susi_students[i].getGrade(j) > 2)
+            {
+                std::cout << izpiti[j].getName() << " - " << susi_students[i].getGrade(j) << '\n';
+            }
+            else
+            {
+                nevzeti_index.push_back(j);
+            }
         }
-        else
+        std::cout << '\n'
+                  << "Failed:" << '\n';
+        for (int j = 0; j < nevzeti_index.size(); j++)
         {
-            nevzeti_index.push_back(j);
+            std::cout << izpiti[nevzeti_index[j]].getName() << " - " << susi_students[i].getGrade(nevzeti_index[j]) << std::endl;
         }
     }
-    std::cout << '\n'
-              << "Failed:" << '\n';
-    for (int j = 0; j < nevzeti_index.size(); j++)
-    {
-        std::cout << izpiti[nevzeti_index[j]].getName() << " - " << susi_students[i].getGrade(nevzeti_index[j]) << std::endl;
-    }
+    else
+        std::cout << "No such student" << '\n';
 }
 
 std::ostream &operator<<(std::ostream &os, const Susi &susi)

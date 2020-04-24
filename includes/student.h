@@ -16,13 +16,13 @@ private:
     friend std::istream &operator>>(std::istream &is, Student &s);
 
 public:
-    enum stat
+    /*enum stat
     {
         Active = 0,
         Dropout,
         Graduated
 
-    };
+    };*/
     Student();
     Student(std::string, std::string, int, int, int, int); //for test only
     Student(std::string, std::string, int, int, int, int, const Program &);

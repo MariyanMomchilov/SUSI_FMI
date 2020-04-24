@@ -64,6 +64,8 @@ std::string Commands::getNextCMD(std::string &str, int &i)
                 while (k != i)
                 {
                     command += str[k];
+                    if (str[k] == ' ')
+                        str[k] = '|';
                     k++;
                 }
             }
@@ -93,12 +95,20 @@ void Commands::_open(std::string &str, int &i)
     else if (parameter.length() != 0)
     {
         this->file.open(parameter, std::ios::out | std::ios::in | std::ios::app);
-        // TO DO: if clause for if file is empty(new), dont read()
-        read();
-        //
-
         if (this->file.good())
             std::cout << "Successfuly opened " << parameter << std::endl;
+
+        if (file.peek() == std::ifstream::traits_type::eof())
+        {
+            std::cout << "File is empty, you must add some members in the following type and order: Disciplines -> Programs -> Students" << '\n';
+
+            this->file.clear();
+        }
+        else
+        {
+            read();
+            std::cout << "File content loaded " << '\n';
+        }
     }
     else
     {

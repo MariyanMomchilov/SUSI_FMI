@@ -80,8 +80,13 @@ bool Student::operator==(const Student &obj) const
 }
 void Student::setStatus(int stat)
 {
-    assert(stat < 3 && stat > -1);
-    status = stat;
+    if (stat < 3 && stat > -1)
+    {
+        status = stat;
+        std::cout << "Successful" << '\n';
+    }
+    else
+        std::cout << "Unsuccessful" << '\n';
 }
 void Student::setProgram(const Program &prog)
 {
@@ -89,7 +94,8 @@ void Student::setProgram(const Program &prog)
 }
 void Student::setYear(int y)
 {
-    year = y;
+    if (y <= this->program.getYearsToGraduate())
+        year = y;
 }
 void Student::setGroup(int g)
 {
@@ -112,14 +118,19 @@ void Student::addDisc(const Discipline &dis)
 }
 void Student::addGrade(const Discipline &dis, int mark)
 {
-    assert(mark > 1 && mark < 7);
-    for (int i = 0; i < disciplines.size(); i++)
+    if (mark > 1 && mark < 7)
     {
-        if (disciplines[i] == dis)
+        for (int i = 0; i < disciplines.size(); i++)
         {
-            grades[i] = mark;
+            if (disciplines[i] == dis)
+            {
+                grades[i] = mark;
+            }
         }
+        std::cout << "Successful" << '\n';
     }
+    else
+        std::cout << "Unsuccessful" << '\n';
 }
 
 int Student::getGrade(int i) const

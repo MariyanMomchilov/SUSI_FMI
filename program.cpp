@@ -65,8 +65,8 @@ void Program::addDiscipline(Discipline dis)
 
 Discipline Program::getDiscipline(int i) const
 {
-    assert(i < disciplines.size());
-    return disciplines[i];
+    if (i < disciplines.size())
+        return disciplines[i];
 }
 
 size_t Program::getDiscSize() const

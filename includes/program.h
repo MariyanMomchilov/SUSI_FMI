@@ -18,11 +18,11 @@ private:
     friend std::istream &operator>>(std::istream &is, Program &prog);
 
 public:
-    enum Type
+    /*enum Type
     {
         Bachelor = 0,
         Master
-    };
+    };*/
 
     Program();
     Program(const std::string &, int, int, int, int);

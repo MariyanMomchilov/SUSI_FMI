@@ -1,0 +1,86 @@
+//компилиране: g++ main.cpp unimem.cpp commands.cpp discipline.cpp discontainer.cpp progcontainer.cpp program.cpp student.cpp susi.cpp
+
+// дисциплини за софт. инж.
+add_discipline "Увод в програмирането" mandatory 1
+add_discipline "Дискретни структури" mandatory 1
+add_discipline "Алгебра 1" mandatory 1
+add_discipline "Обектно ориентирано програмиране" mandatory 1
+add_discipline "Структури от данни и програмиране" mandatory 2
+add_discipline "Геометрия" mandatory 2
+add_discipline "Компютърни архитектури" mandatory 2
+add_discipline "Увод в софтуерното инженерство" mandatory 2
+add_discipline "Икономика" mandatory 3 //2
+add_discipline "Статистика" mandatory 3
+add_discipline "XML технологии" mandatory 3
+add_discipline "Бази от данни" mandatory 3
+add_discipline "UX принципи" mandatory 3
+add_discipline "Data mining" mandatory 4
+add_discipline "Управление на проекти" mandatory 4
+add_discipline "Софтуерни системи" mandatory 4
+add_discipline "WWW технологии" mandatory 4
+
+//дисциплини за статистика
+add_discipline "Линейна алгебра" mandatory 1
+add_discipline "Диференциално и интегрално смятане 1" mandatory 1
+add_discipline "Аналитична геометрия" mandatory 1
+add_discipline "Висша алгебра" mandatory 2
+add_discipline "Диференциално и интегрално смятане 2" mandatory 2
+add_discipline "Увод в статистиката" mandatory 2
+add_discipline "Теория на вероятностите" mandatory 3
+add_discipline "Софтуер за научни изчисления" mandatory 3
+add_discipline "Числени методи" mandatory 3
+add_discipline "Комплексен анализ" mandatory 3
+add_discipline "Нелинейно оптимиране" mandatory 4
+add_discipline "Стохастични числени методи и симулации" mandatory 4
+add_discipline "Многомерни статистически модели" mandatory 4
+add_discipline "Статистическа лаборатория" mandatory 4
+
+//избираеми
+add_discipline "Подготовка за интервюта" selective 2 30
+add_discipline "Swift програмиране" selective 2 30
+add_discipline "Математическа икономика" selective 3 20
+add_discipline "Deep learning" selective 3 35
+add_discipline "Спорт" selective 1 8
+add_discipline "Продължение на Алгебра1" selective 1 25
+add_discipline "ДИС 3" selective 3 30
+// кредити = 178
+
+//програми
+//Софтуерно инж.
+add_program "Софтуерно инженерство" bachelor 4 50 17 "Увод в програмирането" "Дискретни структури" "Алгебра 1" "Обектно ориентирано програмиране" "Структури от данни и програмиране" Геометрия "Компютърни архитектури" "Увод в софтуерното инженерство" "Икономика" "Статистика" "XML технологии" "Бази от данни" "UX принципи" "Data mining" "Управление на проекти" "Софтуерни системи" "WWW технологии" 100
+//Статистика
+add_program "Статистика" bachelor 4 10 14 "Линейна алгебра" "Диференциално и интегрално смятане 1" "Аналитична геометрия" "Висша алгебра" "Диференциално и интегрално смятане 2" "Увод в статистиката" "Теория на вероятностите" "Софтуер за научни изчисления" "Числени методи" "Комплексен анализ" "Нелинейно оптимиране" "Стохастични числени методи и симулации" "Многомерни статистически модели" "Статистическа лаборатория" 120
+
+//студенти
+enroll 1111 "Софтуерно инженерство" 4 Даниел Ангелов
+enroll 8195 "Статистика" 3 Кирил Иванов
+enroll 9999 "Софтуерно инженерство" 1 Михаил Миланов
+
+//1111
+addgrade 1111 "Увод в програмирането" 5
+addgrade 1111 "Дискретни структури" 3
+addgrade 1111 "Структури от данни и програмиране" 6
+addgrade 1111 "Компютърни архитектури" 6
+addgrade 1111 "Обектно ориентирано програмиране" 6
+addgrade 1111 "Алгебра 1" 4
+
+addgrade 1111 "Геометрия" 4
+addgrade 1111 "Увод в софтуерното инженерство" 6
+addgrade 1111 "Икономика" 4
+addgrade 1111 "Статистика" 3
+addgrade 1111 "XML технологии" 5
+addgrade 1111 "Бази от данни" 5
+addgrade 1111 "UX принципи" 5
+addgrade 1111 "Data mining" 5
+addgrade 1111 "Управление на проекти" 5
+addgrade 1111 "Софтуерни системи" 5
+addgrade 1111 "WWW технологии" 6
+
+enrollin 1111 "Deep learning" 
+enrollin 1111 "Подготовка за интервюта"
+enrollin 1111 "Swift програмиране"
+addgrade 1111 "Deep learning" 5
+addgrade 1111 "Подготовка за интервюта" 5
+addgrade 1111 "Swift програмиране" 6
+enrollin 1111 Спорт
+addgrade 1111 Спорт 6

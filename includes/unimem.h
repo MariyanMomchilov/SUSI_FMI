@@ -15,7 +15,7 @@ public:
     UniMember(const UniMember &);
     UniMember &operator=(const UniMember &);
     bool operator==(const UniMember &) const;
-    ~UniMember() = default;
+    virtual ~UniMember() = default;
     std::string getFname() const;
     std::string getLname() const;
     int getFnumber() const;
