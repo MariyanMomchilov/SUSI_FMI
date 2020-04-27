@@ -1,9 +1,8 @@
 #include "includes/unimem.h"
-using namespace std;
 
 UniMember::UniMember() : fName(""), lName(""), facN(0) {}
 
-UniMember::UniMember(const string &fN, const string &lN, int fNum) : fName(fN), lName(lN), facN(fNum) {}
+UniMember::UniMember(const std::string &fN, const std::string &lN, int fNum) : fName(fN), lName(lN), facN(fNum) {}
 UniMember::UniMember(const UniMember &mem)
 {
     this->facN = mem.facN;
@@ -22,11 +21,11 @@ bool UniMember::operator==(const UniMember &mem) const
     return fName == mem.fName && lName == mem.lName && facN == mem.facN;
 }
 
-string UniMember::getFname() const
+std::string UniMember::getFname() const
 {
     return this->fName;
 }
-string UniMember::getLname() const
+std::string UniMember::getLname() const
 {
     return this->lName;
 }

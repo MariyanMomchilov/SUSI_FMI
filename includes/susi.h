@@ -23,7 +23,8 @@ public:
     void addToProgContainer(const Program &);
     void enroll(int fn, const std::string &program_name, int group, const std::string &fname, const std::string &lname);
     void advance(int fn);
-    void change(int fn, std::string &option, std::string &value);
+    void change(int fn, const std::string &option, const std::string &value);
+    void change(int fn, const std::string &option, size_t value);
     void graduate(int fn);
     void interrupt(int fn);
     void resume(int fn);

@@ -1,0 +1,4 @@
+#ignore files
+*/files
+#ignore vscode
+*/.vscode

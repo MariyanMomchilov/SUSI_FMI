@@ -94,7 +94,7 @@ void Commands::_open(std::string &str, int &i)
     }
     else if (parameter.length() != 0)
     {
-        this->file.open(parameter, std::ios::out | std::ios::in);
+        this->file.open(parameter, std::ios::in | std::ios::out); //ako nqma std::ios::app ne suzdava prazen fail ??
         if (this->file.good())
             std::cout << "Successfuly opened " << parameter << std::endl;
 
@@ -283,6 +283,21 @@ void Commands::process(std::string &command)
         {
             unsigned fn = std::stoi(getNextCMD(command, i));
             system.report(fn);
+        }
+        else if (next_cmd == "change")
+        {
+            unsigned fn = std::stoi(getNextCMD(command, i));
+            std::string option = getNextCMD(command, i);
+            if (option == "program")
+            {
+                std::string value = getNextCMD(command, i);
+                system.change(fn, option, value);
+            }
+            else
+            {
+                size_t value = std::stoi(getNextCMD(command, i));
+                system.change(fn, option, value);
+            }
         }
     }
 }

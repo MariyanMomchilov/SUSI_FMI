@@ -1,8 +1,8 @@
 #include "includes/student.h"
 
 Student::Student() : UniMember(), status(0), year(0), group(0) {}
-Student::Student(std::string _fn, std::string _ln, int FN, int stat, int y, int gr) : UniMember(_fn, _ln, FN), status(stat), year(y), group(gr) {}
-Student::Student(std::string _fn, std::string _ln, int FN, int stat, int y, int gr, const Program &prog) : UniMember(_fn, _ln, FN), status(stat), year(y), group(gr), program(prog)
+Student::Student(const std::string &_fn, const std::string &_ln, int FN, int stat, int y, int gr) : UniMember(_fn, _ln, FN), status(stat), year(y), group(gr) {}
+Student::Student(const std::string &_fn, const std::string &_ln, int FN, int stat, int y, int gr, const Program &prog) : UniMember(_fn, _ln, FN), status(stat), year(y), group(gr), program(prog)
 {
     for (int i = 0; i < program.getDiscSize(); i++)
     {
@@ -153,6 +153,19 @@ bool Student::canPass() const
     return count_nevzeti < 3;
 }
 
+bool Student::passedAll() const
+{
+    for (int i = 0; i < disciplines.size(); i++)
+    {
+        if (disciplines[i].getRequiredCourse() <= year)
+        {
+            if (grades[i] < 3)
+                return false;
+        }
+    }
+    return true;
+}
+
 bool Student::canGraduate() const
 {
     int credits = 0;
@@ -173,9 +186,16 @@ bool Student::canGraduate() const
 
 void Student::print() const
 {
+    std::string status_s;
+    if (status == 0)
+        status_s = "Active";
+    else if (status == 1)
+        status_s = "Dropped out";
+    else if (status == 2)
+        status_s = "Graduated";
     std::cout << "Name: " << this->getFname() << " " << this->getLname() << '\n'
               << "FN: " << this->getFnumber() << '\n'
-              << "Status: " << status << '\n'
+              << "Status: " << status_s << '\n'
               << "Year: " << year << '\n'
               << "Group: " << group << '\n'
               << "Program: " << program.getName() << '\n'
@@ -183,7 +203,11 @@ void Student::print() const
 
     for (int i = 0; i < disciplines.size(); i++)
     {
-        std::cout << disciplines[i].getName() << '\n';
+        std::cout << disciplines[i].getName() << ", ";
+        if (i == disciplines.size() - 1)
+        {
+            std::cout << disciplines[i].getName();
+        }
     }
     std::cout << std::endl;
 }

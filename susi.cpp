@@ -283,6 +283,74 @@ void Susi::report(int fn) const
         std::cout << "No such student" << '\n';
 }
 
+void Susi::change(int fn, const std::string &option, const std::string &value)
+{
+    int i = _studentIndex(fn);
+    if (i > -1)
+    {
+        std::vector<Discipline> student_disc = susi_students[i].getDiscplines();
+        Program new_program = susi_programs.getProgram(value);
+        Student changedStudent(susi_students[i].getFname(), susi_students[i].getLname(), susi_students[i].getFnumber(), susi_students[i].getStatus(), susi_students[i].getYear(), susi_students[i].getGroup(), new_program);
+        if (!(new_program == Program())) // new_program != Program()
+        {
+            for (int k = 0; k < new_program.getDiscSize(); k++)
+            {
+                Discipline currentDisc = new_program.getDiscipline(k);
+                for (int j = 0; j < student_disc.size(); j++)
+                {
+                    if (student_disc[j] == currentDisc)
+                    {
+                        if (currentDisc.getRequiredCourse() <= susi_students[i].getYear())
+                        {
+                            if (susi_students[i].getGrade(j) != 2)
+                                changedStudent.addGrade(currentDisc, susi_students[i].getGrade(j));
+                            else
+                            {
+                                std::cout << "Failed" << '\n';
+                                return;
+                            }
+                        }
+                    }
+                }
+            }
+            if (changedStudent.passedAll())
+                susi_students[i] = changedStudent;
+            else
+                std::cout << "Failed" << '\n';
+        }
+    }
+}
+
+void Susi::change(int fn, const std::string &option, size_t value)
+{
+    int student_i = _studentIndex(fn);
+    if (student_i > -1)
+    {
+        if (option == "group")
+        {
+            susi_students[student_i].setGroup(value);
+            std::cout << "Successfull" << '\n';
+        }
+        else if (option == "year")
+        {
+            if (value == susi_students[student_i].getYear() + 1 && susi_students[student_i].canPass())
+            {
+                susi_students[student_i].setYear(susi_students[student_i].getYear() + 1);
+                std::cout << "Successfull" << '\n';
+            }
+            else
+            {
+                std::cout << "Failed" << '\n';
+                return;
+            }
+        }
+    }
+    else
+    {
+        std::cout << "Failed" << '\n';
+    }
+}
+
 std::ostream &operator<<(std::ostream &os, const Susi &susi)
 {
     os << susi.susi_disciplines;
@@ -310,7 +378,3 @@ std::istream &operator>>(std::istream &is, Susi &susi)
     }
     return is;
 }
-
-/*
-void Susi::change(int fn, std::string option, std::string value);
-*/

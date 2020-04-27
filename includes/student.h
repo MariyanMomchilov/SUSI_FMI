@@ -24,8 +24,8 @@ public:
 
     };*/
     Student();
-    Student(std::string, std::string, int, int, int, int); //for test only
-    Student(std::string, std::string, int, int, int, int, const Program &);
+    Student(const std::string &, const std::string &, int, int, int, int); //for test only
+    Student(const std::string &, const std::string &, int, int, int, int, const Program &);
     Student(const Student &);
     Student &operator=(const Student &);
     ~Student() = default;
@@ -36,6 +36,7 @@ public:
     Program getProgram() const;
     bool canPass() const;
     bool canGraduate() const;
+    bool passedAll() const;
     bool isEnrolled(const Discipline &) const;
     std::vector<int> getGrades() const;
     std::vector<Discipline> getDiscplines() const;
@@ -50,7 +51,7 @@ public:
     void addGrade(const Discipline &, int);
     void print() const;
 
-    friend std::ostream &operator<<(std::ostream &, const Student &);
+    //friend std::ostream &operator<<(std::ostream &, const Student &);
 };
 
 #endif

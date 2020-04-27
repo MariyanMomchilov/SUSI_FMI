@@ -26,6 +26,7 @@ Program ProgramContainer::getProgram(const std::string &prog_name) const
         }
     }
     std::cout << "No program found" << '\n';
+    return Program();
 }
 
 bool ProgramContainer::hasProgram(const std::string &program_name) const
