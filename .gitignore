@@ -1,4 +1,3 @@
-#ignore files
-*/files
-#ignore vscode
-*/.vscode
+files
+.vscode
+a.out

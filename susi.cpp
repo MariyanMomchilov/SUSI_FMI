@@ -149,6 +149,7 @@ void Susi::resume(int fn)
 
 void Susi::print(int fn) const
 {
+    std::cout << std::endl;
     int i = _studentIndex(fn);
     assert(i > -1);
     susi_students[i].print();
@@ -156,6 +157,7 @@ void Susi::print(int fn) const
 
 void Susi::printall(const std::string &program_name, int year) const
 {
+    std::cout << std::endl;
     for (int i = 0; i < susi_students.size(); i++)
     {
         if (susi_students[i].getProgram().getName() == program_name && susi_students[i].getYear() == year)
@@ -235,6 +237,7 @@ void Susi::protocol(const std::string &course_name) const
 
         Susi::sort(studentProt);
         std::string currentProgramName = "";
+        std::cout << std::endl;
         for (int i = 0; i < studentProt.size(); i++)
         {
             if (currentProgramName != studentProt[i].getProgram().getName())

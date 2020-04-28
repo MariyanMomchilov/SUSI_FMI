@@ -8,6 +8,7 @@ class Commands
 {
 private:
     std::fstream file;
+    std::string filename;
     void _open(std::string &, int &);
     std::string getNextCMD(std::string &, int &);
     Susi system; // TO DO

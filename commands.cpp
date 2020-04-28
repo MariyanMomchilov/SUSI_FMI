@@ -94,7 +94,8 @@ void Commands::_open(std::string &str, int &i)
     }
     else if (parameter.length() != 0)
     {
-        this->file.open(parameter, std::ios::in | std::ios::out); //ako nqma std::ios::app ne suzdava prazen fail ??
+        filename = parameter;
+        this->file.open(filename, std::ios::in | std::ios::out | std::ios::app); //ako nqma std::ios::app ne suzdava prazen fail ??
         if (this->file.good())
             std::cout << "Successfuly opened " << parameter << std::endl;
 
@@ -140,7 +141,9 @@ void Commands::process(std::string &command)
     {
         if (this->file.is_open())
         {
-            this->file.seekp(0);
+            file.close();
+            //this->file.seekp(0, std::ios::beg);
+            file.open(filename, std::ios::in | std::ios::out | std::ios::trunc);
             write();
         }
     }
