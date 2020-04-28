@@ -257,6 +257,7 @@ void Susi::protocol(const std::string &course_name) const
 
 void Susi::report(int fn) const
 {
+    std::cout << std::endl;
     int i = _studentIndex(fn);
     if (i > -1)
     {
