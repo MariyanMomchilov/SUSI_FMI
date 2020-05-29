@@ -1,0 +1,308 @@
+\hypertarget{class_program}{}\section{Program Class Reference}
+\label{class_program}\index{Program@{Program}}
+
+
+Класът описва дадена специалност  
+
+
+
+
+{\ttfamily \#include $<$program.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_program_aaefaa0df08f3484476fc4d61e97acbdc}{Program} ()
+\begin{DoxyCompactList}\small\item\em Конструктор без параметри \end{DoxyCompactList}\item 
+\hyperlink{class_program_a15ba07f06c4cabc4c1f83fdcc5f755cc}{Program} (const std\+::string \&, int, int, int, int)
+\begin{DoxyCompactList}\small\item\em Конструктор с параметри за име, тип, период на обучение, капацитет \end{DoxyCompactList}\item 
+\hyperlink{class_program_afbe3ef7707295335af806e420bc4eb2c}{Program} (const std\+::string \&, int, int, int, const std\+::vector$<$ \hyperlink{class_discipline}{Discipline} $>$ \&, int)
+\begin{DoxyCompactList}\small\item\em Конструктор с параметри за име, тип, период на обучение, капацитет, списък със задължителни дисциплини, необходим брой кредити за завършване \end{DoxyCompactList}\item 
+\hyperlink{class_program_aa81dab37b223bfc53c08f56d437ada28}{Program} (const \hyperlink{class_program}{Program} \&)
+\begin{DoxyCompactList}\small\item\em Копи-\/конструктор \end{DoxyCompactList}\item 
+\hyperlink{class_program}{Program} \& \hyperlink{class_program_a7eb820964390f06b3170e467af2631fb}{operator=} (const \hyperlink{class_program}{Program} \&)
+\begin{DoxyCompactList}\small\item\em Предефиниране на =. \end{DoxyCompactList}\item 
+\hyperlink{class_program_a1836e019558056cd131f87fb7a2a1547}{$\sim$\+Program} ()=default
+\begin{DoxyCompactList}\small\item\em Деструктор по подразбиране \end{DoxyCompactList}\item 
+bool \hyperlink{class_program_a3f5e4bab9e69d241abe952e17eaca44d}{operator==} (const \hyperlink{class_program}{Program} \&) const
+\begin{DoxyCompactList}\small\item\em Предефиниране на ==. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_program_af1a166f11ed6c82c7377cc67085daf1f}{get\+Name} () const
+\item 
+int \hyperlink{class_program_a6dac45bcf5137b89bbd3a7ef77adab49}{get\+Type} () const
+\item 
+int \hyperlink{class_program_a72ea2125e1081701884ba85e9bc9eb73}{get\+Capacity} () const
+\item 
+int \hyperlink{class_program_a10ec5f4daf928ba6935fa7f23658e668}{get\+Years\+To\+Graduate} () const
+\item 
+int \hyperlink{class_program_a0cfb4743be3207cc4bf89f04b1c8ee50}{get\+Credits\+To\+Graduate} () const
+\item 
+bool \hyperlink{class_program_a050a111ad405a288aedb95de0ada2146}{has\+Discipline} (const \hyperlink{class_discipline}{Discipline} \&) const
+\begin{DoxyCompactList}\small\item\em Проверява дали в специалността се преподава дадена дисциплина \end{DoxyCompactList}\item 
+void \hyperlink{class_program_a383a0511ac35359940d9916f176da268}{add\+Discipline} (\hyperlink{class_discipline}{Discipline})
+\begin{DoxyCompactList}\small\item\em Добавя дисциплина в специалността, ако тази дисциплина я няма в списъка \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{class_program_a3e9f88ff8d80a2207b8171c8cb05a571}{get\+Disc\+Size} () const
+\item 
+\hyperlink{class_discipline}{Discipline} \hyperlink{class_program_a76f3e2bc8956ccd0996caab3a1757092}{get\+Discipline} (int) const
+\begin{DoxyCompactList}\small\item\em Връща дисциплина по даден пореден номер в списъка с дисциплини \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{class_program_a8644dcfc3d08b475b5fe5ec359f05470}{name}
+\item 
+int \hyperlink{class_program_ae12d3f37585c3771e4b50832ff0d5b4d}{type}
+\item 
+int \hyperlink{class_program_a95e24889e5a0ca589d21207b827cb05a}{years\+To\+Graduate}
+\item 
+int \hyperlink{class_program_a61a9a3d2a973dd289315be7065f91237}{capacity}
+\item 
+std\+::vector$<$ \hyperlink{class_discipline}{Discipline} $>$ \hyperlink{class_program_aa093662c1b22262af898b454fb00d2e2}{disciplines}
+\item 
+int \hyperlink{class_program_a609e475b4679c5462133df7f7339ec09}{credits\+To\+Graduate}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{class_program_a1a2195b7c83054fb960d60b48bca35b0}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{class_program}{Program} \&prog)
+\item 
+std\+::istream \& \hyperlink{class_program_a1b59139604420f143cc3eedd6c9134d3}{operator$>$$>$} (std\+::istream \&is, \hyperlink{class_program}{Program} \&prog)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Класът описва дадена специалност 
+
+Класът съдържа данни за име, тип на специалността(Бакалавър, Магистър), период на обучение, капацитет, списък с задължителните дисциплини за специалността, необходим брой кредити за завършване 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_program_aaefaa0df08f3484476fc4d61e97acbdc}\label{class_program_aaefaa0df08f3484476fc4d61e97acbdc}} 
+\index{Program@{Program}!Program@{Program}}
+\index{Program@{Program}!Program@{Program}}
+\subsubsection{\texorpdfstring{Program()}{Program()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Program\+::\+Program (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор без параметри 
+
+\mbox{\Hypertarget{class_program_a15ba07f06c4cabc4c1f83fdcc5f755cc}\label{class_program_a15ba07f06c4cabc4c1f83fdcc5f755cc}} 
+\index{Program@{Program}!Program@{Program}}
+\index{Program@{Program}!Program@{Program}}
+\subsubsection{\texorpdfstring{Program()}{Program()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Program\+::\+Program (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{,  }\item[{int}]{,  }\item[{int}]{,  }\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор с параметри за име, тип, период на обучение, капацитет 
+
+\mbox{\Hypertarget{class_program_afbe3ef7707295335af806e420bc4eb2c}\label{class_program_afbe3ef7707295335af806e420bc4eb2c}} 
+\index{Program@{Program}!Program@{Program}}
+\index{Program@{Program}!Program@{Program}}
+\subsubsection{\texorpdfstring{Program()}{Program()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Program\+::\+Program (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{,  }\item[{int}]{,  }\item[{int}]{,  }\item[{int}]{,  }\item[{const std\+::vector$<$ \hyperlink{class_discipline}{Discipline} $>$ \&}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор с параметри за име, тип, период на обучение, капацитет, списък със задължителни дисциплини, необходим брой кредити за завършване 
+
+\mbox{\Hypertarget{class_program_aa81dab37b223bfc53c08f56d437ada28}\label{class_program_aa81dab37b223bfc53c08f56d437ada28}} 
+\index{Program@{Program}!Program@{Program}}
+\index{Program@{Program}!Program@{Program}}
+\subsubsection{\texorpdfstring{Program()}{Program()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Program\+::\+Program (\begin{DoxyParamCaption}\item[{const \hyperlink{class_program}{Program} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Копи-\/конструктор 
+
+\mbox{\Hypertarget{class_program_a1836e019558056cd131f87fb7a2a1547}\label{class_program_a1836e019558056cd131f87fb7a2a1547}} 
+\index{Program@{Program}!````~Program@{$\sim$\+Program}}
+\index{````~Program@{$\sim$\+Program}!Program@{Program}}
+\subsubsection{\texorpdfstring{$\sim$\+Program()}{~Program()}}
+{\footnotesize\ttfamily Program\+::$\sim$\+Program (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Деструктор по подразбиране 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_program_a383a0511ac35359940d9916f176da268}\label{class_program_a383a0511ac35359940d9916f176da268}} 
+\index{Program@{Program}!add\+Discipline@{add\+Discipline}}
+\index{add\+Discipline@{add\+Discipline}!Program@{Program}}
+\subsubsection{\texorpdfstring{add\+Discipline()}{addDiscipline()}}
+{\footnotesize\ttfamily void Program\+::add\+Discipline (\begin{DoxyParamCaption}\item[{\hyperlink{class_discipline}{Discipline}}]{ }\end{DoxyParamCaption})}
+
+
+
+Добавя дисциплина в специалността, ако тази дисциплина я няма в списъка 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_discipline}{Discipline}} & дисциплина \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_program_a72ea2125e1081701884ba85e9bc9eb73}\label{class_program_a72ea2125e1081701884ba85e9bc9eb73}} 
+\index{Program@{Program}!get\+Capacity@{get\+Capacity}}
+\index{get\+Capacity@{get\+Capacity}!Program@{Program}}
+\subsubsection{\texorpdfstring{get\+Capacity()}{getCapacity()}}
+{\footnotesize\ttfamily int Program\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+int капацитет 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_program_a0cfb4743be3207cc4bf89f04b1c8ee50}\label{class_program_a0cfb4743be3207cc4bf89f04b1c8ee50}} 
+\index{Program@{Program}!get\+Credits\+To\+Graduate@{get\+Credits\+To\+Graduate}}
+\index{get\+Credits\+To\+Graduate@{get\+Credits\+To\+Graduate}!Program@{Program}}
+\subsubsection{\texorpdfstring{get\+Credits\+To\+Graduate()}{getCreditsToGraduate()}}
+{\footnotesize\ttfamily int Program\+::get\+Credits\+To\+Graduate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+int кредити 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_program_a76f3e2bc8956ccd0996caab3a1757092}\label{class_program_a76f3e2bc8956ccd0996caab3a1757092}} 
+\index{Program@{Program}!get\+Discipline@{get\+Discipline}}
+\index{get\+Discipline@{get\+Discipline}!Program@{Program}}
+\subsubsection{\texorpdfstring{get\+Discipline()}{getDiscipline()}}
+{\footnotesize\ttfamily \hyperlink{class_discipline}{Discipline} Program\+::get\+Discipline (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Връща дисциплина по даден пореден номер в списъка с дисциплини 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & пореден номер \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_discipline}{Discipline} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_program_a3e9f88ff8d80a2207b8171c8cb05a571}\label{class_program_a3e9f88ff8d80a2207b8171c8cb05a571}} 
+\index{Program@{Program}!get\+Disc\+Size@{get\+Disc\+Size}}
+\index{get\+Disc\+Size@{get\+Disc\+Size}!Program@{Program}}
+\subsubsection{\texorpdfstring{get\+Disc\+Size()}{getDiscSize()}}
+{\footnotesize\ttfamily size\+\_\+t Program\+::get\+Disc\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t броя на задължителните дисциплини в специалността 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_program_af1a166f11ed6c82c7377cc67085daf1f}\label{class_program_af1a166f11ed6c82c7377cc67085daf1f}} 
+\index{Program@{Program}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Program@{Program}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily std\+::string Program\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+string име 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_program_a6dac45bcf5137b89bbd3a7ef77adab49}\label{class_program_a6dac45bcf5137b89bbd3a7ef77adab49}} 
+\index{Program@{Program}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Program@{Program}}
+\subsubsection{\texorpdfstring{get\+Type()}{getType()}}
+{\footnotesize\ttfamily int Program\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+int тип(Бакалавър -\/ 0, Магистър -\/ 1) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_program_a10ec5f4daf928ba6935fa7f23658e668}\label{class_program_a10ec5f4daf928ba6935fa7f23658e668}} 
+\index{Program@{Program}!get\+Years\+To\+Graduate@{get\+Years\+To\+Graduate}}
+\index{get\+Years\+To\+Graduate@{get\+Years\+To\+Graduate}!Program@{Program}}
+\subsubsection{\texorpdfstring{get\+Years\+To\+Graduate()}{getYearsToGraduate()}}
+{\footnotesize\ttfamily int Program\+::get\+Years\+To\+Graduate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+int период на обучение 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_program_a050a111ad405a288aedb95de0ada2146}\label{class_program_a050a111ad405a288aedb95de0ada2146}} 
+\index{Program@{Program}!has\+Discipline@{has\+Discipline}}
+\index{has\+Discipline@{has\+Discipline}!Program@{Program}}
+\subsubsection{\texorpdfstring{has\+Discipline()}{hasDiscipline()}}
+{\footnotesize\ttfamily bool Program\+::has\+Discipline (\begin{DoxyParamCaption}\item[{const \hyperlink{class_discipline}{Discipline} \&}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Проверява дали в специалността се преподава дадена дисциплина 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_discipline}{Discipline}} & дисциплина \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true ако се преподава, false иначе 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_program_a7eb820964390f06b3170e467af2631fb}\label{class_program_a7eb820964390f06b3170e467af2631fb}} 
+\index{Program@{Program}!operator=@{operator=}}
+\index{operator=@{operator=}!Program@{Program}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_program}{Program}\& Program\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_program}{Program} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Предефиниране на =. 
+
+\mbox{\Hypertarget{class_program_a3f5e4bab9e69d241abe952e17eaca44d}\label{class_program_a3f5e4bab9e69d241abe952e17eaca44d}} 
+\index{Program@{Program}!operator==@{operator==}}
+\index{operator==@{operator==}!Program@{Program}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Program\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_program}{Program} \&}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Предефиниране на ==. 
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_program_a1a2195b7c83054fb960d60b48bca35b0}\label{class_program_a1a2195b7c83054fb960d60b48bca35b0}} 
+\index{Program@{Program}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Program@{Program}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{class_program}{Program} \&}]{prog }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_program_a1b59139604420f143cc3eedd6c9134d3}\label{class_program_a1b59139604420f143cc3eedd6c9134d3}} 
+\index{Program@{Program}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Program@{Program}}
+\subsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\hyperlink{class_program}{Program} \&}]{prog }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_program_a61a9a3d2a973dd289315be7065f91237}\label{class_program_a61a9a3d2a973dd289315be7065f91237}} 
+\index{Program@{Program}!capacity@{capacity}}
+\index{capacity@{capacity}!Program@{Program}}
+\subsubsection{\texorpdfstring{capacity}{capacity}}
+{\footnotesize\ttfamily int Program\+::capacity\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_program_a609e475b4679c5462133df7f7339ec09}\label{class_program_a609e475b4679c5462133df7f7339ec09}} 
+\index{Program@{Program}!credits\+To\+Graduate@{credits\+To\+Graduate}}
+\index{credits\+To\+Graduate@{credits\+To\+Graduate}!Program@{Program}}
+\subsubsection{\texorpdfstring{credits\+To\+Graduate}{creditsToGraduate}}
+{\footnotesize\ttfamily int Program\+::credits\+To\+Graduate\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_program_aa093662c1b22262af898b454fb00d2e2}\label{class_program_aa093662c1b22262af898b454fb00d2e2}} 
+\index{Program@{Program}!disciplines@{disciplines}}
+\index{disciplines@{disciplines}!Program@{Program}}
+\subsubsection{\texorpdfstring{disciplines}{disciplines}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{class_discipline}{Discipline}$>$ Program\+::disciplines\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_program_a8644dcfc3d08b475b5fe5ec359f05470}\label{class_program_a8644dcfc3d08b475b5fe5ec359f05470}} 
+\index{Program@{Program}!name@{name}}
+\index{name@{name}!Program@{Program}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Program\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_program_ae12d3f37585c3771e4b50832ff0d5b4d}\label{class_program_ae12d3f37585c3771e4b50832ff0d5b4d}} 
+\index{Program@{Program}!type@{type}}
+\index{type@{type}!Program@{Program}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily int Program\+::type\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_program_a95e24889e5a0ca589d21207b827cb05a}\label{class_program_a95e24889e5a0ca589d21207b827cb05a}} 
+\index{Program@{Program}!years\+To\+Graduate@{years\+To\+Graduate}}
+\index{years\+To\+Graduate@{years\+To\+Graduate}!Program@{Program}}
+\subsubsection{\texorpdfstring{years\+To\+Graduate}{yearsToGraduate}}
+{\footnotesize\ttfamily int Program\+::years\+To\+Graduate\hspace{0.3cm}{\ttfamily [private]}}
+

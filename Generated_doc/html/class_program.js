@@ -1,0 +1,27 @@
+var class_program =
+[
+    [ "Program", "class_program.html#aaefaa0df08f3484476fc4d61e97acbdc", null ],
+    [ "Program", "class_program.html#a15ba07f06c4cabc4c1f83fdcc5f755cc", null ],
+    [ "Program", "class_program.html#afbe3ef7707295335af806e420bc4eb2c", null ],
+    [ "Program", "class_program.html#aa81dab37b223bfc53c08f56d437ada28", null ],
+    [ "~Program", "class_program.html#a1836e019558056cd131f87fb7a2a1547", null ],
+    [ "addDiscipline", "class_program.html#a383a0511ac35359940d9916f176da268", null ],
+    [ "getCapacity", "class_program.html#a72ea2125e1081701884ba85e9bc9eb73", null ],
+    [ "getCreditsToGraduate", "class_program.html#a0cfb4743be3207cc4bf89f04b1c8ee50", null ],
+    [ "getDiscipline", "class_program.html#a76f3e2bc8956ccd0996caab3a1757092", null ],
+    [ "getDiscSize", "class_program.html#a3e9f88ff8d80a2207b8171c8cb05a571", null ],
+    [ "getName", "class_program.html#af1a166f11ed6c82c7377cc67085daf1f", null ],
+    [ "getType", "class_program.html#a6dac45bcf5137b89bbd3a7ef77adab49", null ],
+    [ "getYearsToGraduate", "class_program.html#a10ec5f4daf928ba6935fa7f23658e668", null ],
+    [ "hasDiscipline", "class_program.html#a050a111ad405a288aedb95de0ada2146", null ],
+    [ "operator=", "class_program.html#a7eb820964390f06b3170e467af2631fb", null ],
+    [ "operator==", "class_program.html#a3f5e4bab9e69d241abe952e17eaca44d", null ],
+    [ "operator<<", "class_program.html#a1a2195b7c83054fb960d60b48bca35b0", null ],
+    [ "operator>>", "class_program.html#a1b59139604420f143cc3eedd6c9134d3", null ],
+    [ "capacity", "class_program.html#a61a9a3d2a973dd289315be7065f91237", null ],
+    [ "creditsToGraduate", "class_program.html#a609e475b4679c5462133df7f7339ec09", null ],
+    [ "disciplines", "class_program.html#aa093662c1b22262af898b454fb00d2e2", null ],
+    [ "name", "class_program.html#a8644dcfc3d08b475b5fe5ec359f05470", null ],
+    [ "type", "class_program.html#ae12d3f37585c3771e4b50832ff0d5b4d", null ],
+    [ "yearsToGraduate", "class_program.html#a95e24889e5a0ca589d21207b827cb05a", null ]
+];

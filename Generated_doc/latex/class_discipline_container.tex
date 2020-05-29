@@ -1,0 +1,170 @@
+\hypertarget{class_discipline_container}{}\section{Discipline\+Container Class Reference}
+\label{class_discipline_container}\index{Discipline\+Container@{Discipline\+Container}}
+
+
+Класът представлява контейнер за \hyperlink{class_discipline}{Discipline}.  
+
+
+
+
+{\ttfamily \#include $<$discontainer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_discipline_container_a43b580c11fca8f1309abdf8384908625}{Discipline\+Container} ()=default
+\begin{DoxyCompactList}\small\item\em Конструктор по подразбиране \end{DoxyCompactList}\item 
+int \hyperlink{class_discipline_container_a9ecb0f7eeed76342c004bbb4389353a5}{size} () const
+\item 
+bool \hyperlink{class_discipline_container_a22a8e254017993dc4d51511f3ee0e14f}{has\+Discipline} (const \hyperlink{class_discipline}{Discipline} \&) const
+\begin{DoxyCompactList}\small\item\em Проверява дали дадена дисциплина се съдържа в контейнера \end{DoxyCompactList}\item 
+int \hyperlink{class_discipline_container_addcd8466fa548162a6be57ea779a375b}{index\+Discipline} (const std\+::string \&) const
+\begin{DoxyCompactList}\small\item\em Намира индексът към дадена дисциплина по дадено име \end{DoxyCompactList}\item 
+void \hyperlink{class_discipline_container_af7be4f1504b7f6dbc65ddf4af9799fcd}{add\+Discipline} (const \hyperlink{class_discipline}{Discipline} \&)
+\begin{DoxyCompactList}\small\item\em Добавя нова дисциплина в контейнера \end{DoxyCompactList}\item 
+void \hyperlink{class_discipline_container_a7c2ef60c5fa05157ad2b9e86f36b33ca}{remove\+Discipline} (const \hyperlink{class_discipline}{Discipline} \&)
+\begin{DoxyCompactList}\small\item\em Премахва дадена дисциплина от контейнера \end{DoxyCompactList}\item 
+\hyperlink{class_discipline}{Discipline} \hyperlink{class_discipline_container_aba611613c69a52dc6aa84ca511140016}{operator\mbox{[}$\,$\mbox{]}} (int) const
+\begin{DoxyCompactList}\small\item\em Предефиниране на \mbox{[}\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{class_discipline}{Discipline} $>$ \hyperlink{class_discipline_container_aa751d8be73af398d0f08514954b352ca}{disciplines}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{class_discipline_container_a607f596b8da0b7ba4b4ac9c7052a4dc8}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{class_discipline_container}{Discipline\+Container} \&obj)
+\item 
+std\+::istream \& \hyperlink{class_discipline_container_ae5ca1b37f6cd35db450f74531fb500d3}{operator$>$$>$} (std\+::istream \&is, \hyperlink{class_discipline_container}{Discipline\+Container} \&obj)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Класът представлява контейнер за \hyperlink{class_discipline}{Discipline}. 
+
+Член-\/данни\+: вектор(масив) от \hyperlink{class_discipline}{Discipline} 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_discipline_container_a43b580c11fca8f1309abdf8384908625}\label{class_discipline_container_a43b580c11fca8f1309abdf8384908625}} 
+\index{Discipline\+Container@{Discipline\+Container}!Discipline\+Container@{Discipline\+Container}}
+\index{Discipline\+Container@{Discipline\+Container}!Discipline\+Container@{Discipline\+Container}}
+\subsubsection{\texorpdfstring{Discipline\+Container()}{DisciplineContainer()}}
+{\footnotesize\ttfamily Discipline\+Container\+::\+Discipline\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Конструктор по подразбиране 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_discipline_container_af7be4f1504b7f6dbc65ddf4af9799fcd}\label{class_discipline_container_af7be4f1504b7f6dbc65ddf4af9799fcd}} 
+\index{Discipline\+Container@{Discipline\+Container}!add\+Discipline@{add\+Discipline}}
+\index{add\+Discipline@{add\+Discipline}!Discipline\+Container@{Discipline\+Container}}
+\subsubsection{\texorpdfstring{add\+Discipline()}{addDiscipline()}}
+{\footnotesize\ttfamily void Discipline\+Container\+::add\+Discipline (\begin{DoxyParamCaption}\item[{const \hyperlink{class_discipline}{Discipline} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Добавя нова дисциплина в контейнера 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_discipline}{Discipline}} & дисциплина \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_discipline_container_a22a8e254017993dc4d51511f3ee0e14f}\label{class_discipline_container_a22a8e254017993dc4d51511f3ee0e14f}} 
+\index{Discipline\+Container@{Discipline\+Container}!has\+Discipline@{has\+Discipline}}
+\index{has\+Discipline@{has\+Discipline}!Discipline\+Container@{Discipline\+Container}}
+\subsubsection{\texorpdfstring{has\+Discipline()}{hasDiscipline()}}
+{\footnotesize\ttfamily bool Discipline\+Container\+::has\+Discipline (\begin{DoxyParamCaption}\item[{const \hyperlink{class_discipline}{Discipline} \&}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Проверява дали дадена дисциплина се съдържа в контейнера 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_discipline}{Discipline}} & дисциплина \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true ако е в контейнера. false иначе 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_discipline_container_addcd8466fa548162a6be57ea779a375b}\label{class_discipline_container_addcd8466fa548162a6be57ea779a375b}} 
+\index{Discipline\+Container@{Discipline\+Container}!index\+Discipline@{index\+Discipline}}
+\index{index\+Discipline@{index\+Discipline}!Discipline\+Container@{Discipline\+Container}}
+\subsubsection{\texorpdfstring{index\+Discipline()}{indexDiscipline()}}
+{\footnotesize\ttfamily int Discipline\+Container\+::index\+Discipline (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Намира индексът към дадена дисциплина по дадено име 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & име на дисциплина \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int $>$= 0, ако е намерена, -\/1 иначе 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_discipline_container_aba611613c69a52dc6aa84ca511140016}\label{class_discipline_container_aba611613c69a52dc6aa84ca511140016}} 
+\index{Discipline\+Container@{Discipline\+Container}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Discipline\+Container@{Discipline\+Container}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \hyperlink{class_discipline}{Discipline} Discipline\+Container\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Предефиниране на \mbox{[}\mbox{]}. 
+
+\mbox{\Hypertarget{class_discipline_container_a7c2ef60c5fa05157ad2b9e86f36b33ca}\label{class_discipline_container_a7c2ef60c5fa05157ad2b9e86f36b33ca}} 
+\index{Discipline\+Container@{Discipline\+Container}!remove\+Discipline@{remove\+Discipline}}
+\index{remove\+Discipline@{remove\+Discipline}!Discipline\+Container@{Discipline\+Container}}
+\subsubsection{\texorpdfstring{remove\+Discipline()}{removeDiscipline()}}
+{\footnotesize\ttfamily void Discipline\+Container\+::remove\+Discipline (\begin{DoxyParamCaption}\item[{const \hyperlink{class_discipline}{Discipline} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Премахва дадена дисциплина от контейнера 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_discipline}{Discipline}} & дисциплина \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_discipline_container_a9ecb0f7eeed76342c004bbb4389353a5}\label{class_discipline_container_a9ecb0f7eeed76342c004bbb4389353a5}} 
+\index{Discipline\+Container@{Discipline\+Container}!size@{size}}
+\index{size@{size}!Discipline\+Container@{Discipline\+Container}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int Discipline\+Container\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+int размер на контейнера 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_discipline_container_a607f596b8da0b7ba4b4ac9c7052a4dc8}\label{class_discipline_container_a607f596b8da0b7ba4b4ac9c7052a4dc8}} 
+\index{Discipline\+Container@{Discipline\+Container}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Discipline\+Container@{Discipline\+Container}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{class_discipline_container}{Discipline\+Container} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_discipline_container_ae5ca1b37f6cd35db450f74531fb500d3}\label{class_discipline_container_ae5ca1b37f6cd35db450f74531fb500d3}} 
+\index{Discipline\+Container@{Discipline\+Container}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Discipline\+Container@{Discipline\+Container}}
+\subsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\hyperlink{class_discipline_container}{Discipline\+Container} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_discipline_container_aa751d8be73af398d0f08514954b352ca}\label{class_discipline_container_aa751d8be73af398d0f08514954b352ca}} 
+\index{Discipline\+Container@{Discipline\+Container}!disciplines@{disciplines}}
+\index{disciplines@{disciplines}!Discipline\+Container@{Discipline\+Container}}
+\subsubsection{\texorpdfstring{disciplines}{disciplines}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{class_discipline}{Discipline}$>$ Discipline\+Container\+::disciplines\hspace{0.3cm}{\ttfamily [private]}}
+

@@ -1,0 +1,479 @@
+\hypertarget{class_susi}{}\section{Susi Class Reference}
+\label{class_susi}\index{Susi@{Susi}}
+
+
+Класът описва системата СУСИ  
+
+
+
+
+{\ttfamily \#include $<$susi.\+h$>$}
+
+
+
+Collaboration diagram for Susi\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_susi_a787354112d858530b76a94845c47e99e}{Susi} ()
+\begin{DoxyCompactList}\small\item\em Конструктор без параметри \end{DoxyCompactList}\item 
+\hyperlink{class_student}{Student} \hyperlink{class_susi_acc0db9f4d2400a50649d76f1aa41482b}{get\+Student} (int fn) const
+\begin{DoxyCompactList}\small\item\em Намира \hyperlink{class_student}{Student} във вектора от студенти по даден ФН, чрез \hyperlink{class_susi_a2c1e25d57c4cf29149803a4d86c8e585}{\+\_\+student\+Index()} \end{DoxyCompactList}\item 
+\hyperlink{class_program}{Program} \hyperlink{class_susi_adebc81f1debd6b4cf54dd1db6c6ba9be}{get\+Program} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Намира \hyperlink{class_program}{Program} по дадено име \end{DoxyCompactList}\item 
+\hyperlink{class_discipline}{Discipline} \hyperlink{class_susi_ad996bd123ef25d812e3fc5d1717edf07}{get\+Discipline} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Намира \hyperlink{class_discipline}{Discipline} по дадено име \end{DoxyCompactList}\item 
+void \hyperlink{class_susi_a75d9497bae2d3c173ab21e684ad9704c}{add\+To\+Dis\+Container} (const \hyperlink{class_discipline}{Discipline} \&)
+\begin{DoxyCompactList}\small\item\em Добавя дисциплина в \hyperlink{class_discipline_container}{Discipline\+Container}. \end{DoxyCompactList}\item 
+void \hyperlink{class_susi_ae0c687f02724b86c9925aff184a62387}{add\+To\+Prog\+Container} (const \hyperlink{class_program}{Program} \&)
+\begin{DoxyCompactList}\small\item\em Добавя специалност в \hyperlink{class_program_container}{Program\+Container}. \end{DoxyCompactList}\item 
+void \hyperlink{class_susi_ab9b88542f94c2704ae5ca128a9022eff}{enroll} (int fn, const std\+::string \&program\+\_\+name, int group, const std\+::string \&fname, const std\+::string \&lname)
+\begin{DoxyCompactList}\small\item\em Записва студент в първи курс \end{DoxyCompactList}\item 
+void \hyperlink{class_susi_a6be5a7767b5c4d06459ef4a3542aaee6}{advance} (int fn)
+\begin{DoxyCompactList}\small\item\em Записва студент в следващ курс \end{DoxyCompactList}\item 
+void \hyperlink{class_susi_a4b7d060513f731cd277bd4c5ae6b63de}{change} (int fn, const std\+::string \&option, const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Прехвърля студента с факултетен номер в нова специалност(program), група(group) или курс(year) зададени чрез$<$value$>$. \end{DoxyCompactList}\item 
+void \hyperlink{class_susi_a1c63140f45aed3553615f5da680e4edd}{change} (int fn, const std\+::string \&option, size\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Прехвърля студента с факултетен номер в нова специалност(program), група(group) или курс(year) зададени чрез$<$value$>$. \end{DoxyCompactList}\item 
+void \hyperlink{class_susi_a59e196ecdbd15d01f846b442cdc9a345}{graduate} (int fn)
+\begin{DoxyCompactList}\small\item\em Отбелязва студента като завършил, но само ако е положил успешно изпити по всички записани предмети \end{DoxyCompactList}\item 
+void \hyperlink{class_susi_af0dc551bdb5927df3cf961cf90768566}{interrupt} (int fn)
+\begin{DoxyCompactList}\small\item\em Маркира студента с факултетен номер като прекъснал. \end{DoxyCompactList}\item 
+void \hyperlink{class_susi_a2294098afce61489563ac5fd9dea79ff}{resume} (int fn)
+\begin{DoxyCompactList}\small\item\em Възстановява студентските права на студента с факултетен номер \end{DoxyCompactList}\item 
+void \hyperlink{class_susi_a130c33e1b520a6f06b876b5b547bb11b}{print} (int fn) const
+\begin{DoxyCompactList}\small\item\em Извежда справка за студента с факултетен номер \end{DoxyCompactList}\item 
+void \hyperlink{class_susi_a36287fc59b1d361e4f868eec9eb9771d}{printall} (const std\+::string \&program\+\_\+name, int year) const
+\begin{DoxyCompactList}\small\item\em Извежда справка за всички студенти в дадена специалност и курс \end{DoxyCompactList}\item 
+void \hyperlink{class_susi_a7d5a18086b8060430995f8de865399a8}{enrollin} (int fn, const std\+::string \&course\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Записва студента с факултетен номер в дисциплината с име. \end{DoxyCompactList}\item 
+void \hyperlink{class_susi_a733754f4b69ee279041fe94d2b67b310}{add\+Grade} (int fn, const std\+::string \&course\+\_\+name, int grade)
+\begin{DoxyCompactList}\small\item\em Добавя оценка по дисциплината на студента с факултетен номер. \end{DoxyCompactList}\item 
+void \hyperlink{class_susi_a9e563066928e033a73124ee235b51d26}{protocol} (const std\+::string \&course\+\_\+name) const
+\begin{DoxyCompactList}\small\item\em Извежда протоколи за всички студенти, записани в дадена дисциплина. \end{DoxyCompactList}\item 
+void \hyperlink{class_susi_a6511521c7645dc43a080c5921f037d8f}{report} (int fn) const
+\begin{DoxyCompactList}\small\item\em Извежда академична справка за оценките на даден студент (списък с всички взети и невзети изпити, съответните оценки и успех на студента) ///. \end{DoxyCompactList}\item 
+void \hyperlink{class_susi_a98cf9bfd27148f4a3c108ff5dcc0dd25}{sort} (std\+::vector$<$ \hyperlink{class_student}{Student} $>$ \&) const
+\begin{DoxyCompactList}\small\item\em Сортираща функция (selection sort) за вектора от \hyperlink{class_student}{Student}. \end{DoxyCompactList}\item 
+\hyperlink{class_susi_ae91ce62ca3142f9f7f7c77749b0df03e}{$\sim$\+Susi} ()=default
+\begin{DoxyCompactList}\small\item\em Деструктор по подразбиране \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_susi_a2c1e25d57c4cf29149803a4d86c8e585}{\+\_\+student\+Index} (int fn) const
+\begin{DoxyCompactList}\small\item\em Намира индекс на \hyperlink{class_student}{Student} във вектора от студенти по даден ФН \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_discipline_container}{Discipline\+Container} \hyperlink{class_susi_a565e54b3a964048eeeb0fc08db29a483}{susi\+\_\+disciplines}
+\item 
+\hyperlink{class_program_container}{Program\+Container} \hyperlink{class_susi_ae443169a57ca8f5a02cedbd857160cc4}{susi\+\_\+programs}
+\item 
+std\+::vector$<$ \hyperlink{class_student}{Student} $>$ \hyperlink{class_susi_a01120305c1d7fac67fc79a026d9579ba}{susi\+\_\+students}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{class_susi_a19986b37cae9f955a39548b141c5505d}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{class_susi}{Susi} \&susi)
+\item 
+std\+::istream \& \hyperlink{class_susi_a2cc9661c48db37bc6a525e4fe567ec23}{operator$>$$>$} (std\+::istream \&is, \hyperlink{class_susi}{Susi} \&susi)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Класът описва системата СУСИ 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_susi_a787354112d858530b76a94845c47e99e}\label{class_susi_a787354112d858530b76a94845c47e99e}} 
+\index{Susi@{Susi}!Susi@{Susi}}
+\index{Susi@{Susi}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{Susi()}{Susi()}}
+{\footnotesize\ttfamily Susi\+::\+Susi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор без параметри 
+
+\mbox{\Hypertarget{class_susi_ae91ce62ca3142f9f7f7c77749b0df03e}\label{class_susi_ae91ce62ca3142f9f7f7c77749b0df03e}} 
+\index{Susi@{Susi}!````~Susi@{$\sim$\+Susi}}
+\index{````~Susi@{$\sim$\+Susi}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{$\sim$\+Susi()}{~Susi()}}
+{\footnotesize\ttfamily Susi\+::$\sim$\+Susi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Деструктор по подразбиране 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_susi_a2c1e25d57c4cf29149803a4d86c8e585}\label{class_susi_a2c1e25d57c4cf29149803a4d86c8e585}} 
+\index{Susi@{Susi}!\+\_\+student\+Index@{\+\_\+student\+Index}}
+\index{\+\_\+student\+Index@{\+\_\+student\+Index}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{\+\_\+student\+Index()}{\_studentIndex()}}
+{\footnotesize\ttfamily int Susi\+::\+\_\+student\+Index (\begin{DoxyParamCaption}\item[{int}]{fn }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Намира индекс на \hyperlink{class_student}{Student} във вектора от студенти по даден ФН 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & ФН \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int $>$= 0 ако е намерен \hyperlink{class_student}{Student}, -\/1 иначе 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_susi_a733754f4b69ee279041fe94d2b67b310}\label{class_susi_a733754f4b69ee279041fe94d2b67b310}} 
+\index{Susi@{Susi}!add\+Grade@{add\+Grade}}
+\index{add\+Grade@{add\+Grade}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{add\+Grade()}{addGrade()}}
+{\footnotesize\ttfamily void Susi\+::add\+Grade (\begin{DoxyParamCaption}\item[{int}]{fn,  }\item[{const std\+::string \&}]{course\+\_\+name,  }\item[{int}]{grade }\end{DoxyParamCaption})}
+
+
+
+Добавя оценка по дисциплината на студента с факултетен номер. 
+
+Явяването на изпит е позволено само за дисциплини, които са записани 
+\begin{DoxyParams}{Parameters}
+{\em int} & ФН \\
+\hline
+{\em string} & име на специалност \\
+\hline
+{\em int} & оценка \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_susi_a75d9497bae2d3c173ab21e684ad9704c}\label{class_susi_a75d9497bae2d3c173ab21e684ad9704c}} 
+\index{Susi@{Susi}!add\+To\+Dis\+Container@{add\+To\+Dis\+Container}}
+\index{add\+To\+Dis\+Container@{add\+To\+Dis\+Container}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{add\+To\+Dis\+Container()}{addToDisContainer()}}
+{\footnotesize\ttfamily void Susi\+::add\+To\+Dis\+Container (\begin{DoxyParamCaption}\item[{const \hyperlink{class_discipline}{Discipline} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Добавя дисциплина в \hyperlink{class_discipline_container}{Discipline\+Container}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_discipline}{Discipline}} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_susi_ae0c687f02724b86c9925aff184a62387}\label{class_susi_ae0c687f02724b86c9925aff184a62387}} 
+\index{Susi@{Susi}!add\+To\+Prog\+Container@{add\+To\+Prog\+Container}}
+\index{add\+To\+Prog\+Container@{add\+To\+Prog\+Container}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{add\+To\+Prog\+Container()}{addToProgContainer()}}
+{\footnotesize\ttfamily void Susi\+::add\+To\+Prog\+Container (\begin{DoxyParamCaption}\item[{const \hyperlink{class_program}{Program} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Добавя специалност в \hyperlink{class_program_container}{Program\+Container}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_program}{Program}} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_susi_a6be5a7767b5c4d06459ef4a3542aaee6}\label{class_susi_a6be5a7767b5c4d06459ef4a3542aaee6}} 
+\index{Susi@{Susi}!advance@{advance}}
+\index{advance@{advance}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{advance()}{advance()}}
+{\footnotesize\ttfamily void Susi\+::advance (\begin{DoxyParamCaption}\item[{int}]{fn }\end{DoxyParamCaption})}
+
+
+
+Записва студент в следващ курс 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & ФН \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_susi_a4b7d060513f731cd277bd4c5ae6b63de}\label{class_susi_a4b7d060513f731cd277bd4c5ae6b63de}} 
+\index{Susi@{Susi}!change@{change}}
+\index{change@{change}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{change()}{change()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Susi\+::change (\begin{DoxyParamCaption}\item[{int}]{fn,  }\item[{const std\+::string \&}]{option,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Прехвърля студента с факултетен номер в нова специалност(program), група(group) или курс(year) зададени чрез$<$value$>$. 
+
+Прехвърлянето в група е възможно винаги.\+Прехвърлянето в следващ курс е възможно само, ако студентът е положил успешно изпитите по всички задължителни предмети от минали курсове, с евентуално изключение на максимум два курса.\+Прехвърляне в курс, различен от следващия, не е възможно.\+Прехвърлянето в друга специалност е възможно само, ако студентът е положил успешно изпити по всички задължителни предмети от минали курсове на новата специалност. 
+\begin{DoxyParams}{Parameters}
+{\em int} & ФН \\
+\hline
+{\em string} & опция \\
+\hline
+{\em string} & стойност \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_susi_a1c63140f45aed3553615f5da680e4edd}\label{class_susi_a1c63140f45aed3553615f5da680e4edd}} 
+\index{Susi@{Susi}!change@{change}}
+\index{change@{change}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{change()}{change()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Susi\+::change (\begin{DoxyParamCaption}\item[{int}]{fn,  }\item[{const std\+::string \&}]{option,  }\item[{size\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Прехвърля студента с факултетен номер в нова специалност(program), група(group) или курс(year) зададени чрез$<$value$>$. 
+
+Прехвърлянето в група е възможно винаги.\+Прехвърлянето в следващ курс е възможно само, ако студентът е положил успешно изпитите по всички задължителни предмети от минали курсове, с евентуално изключение на максимум два курса.\+Прехвърляне в курс, различен от следващия, не е възможно.\+Прехвърлянето в друга специалност е възможно само, ако студентът е положил успешно изпити по всички задължителни предмети от минали курсове на новата специалност. 
+\begin{DoxyParams}{Parameters}
+{\em int} & ФН \\
+\hline
+{\em string} & опция \\
+\hline
+{\em size\+\_\+t} & стойност \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_susi_ab9b88542f94c2704ae5ca128a9022eff}\label{class_susi_ab9b88542f94c2704ae5ca128a9022eff}} 
+\index{Susi@{Susi}!enroll@{enroll}}
+\index{enroll@{enroll}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{enroll()}{enroll()}}
+{\footnotesize\ttfamily void Susi\+::enroll (\begin{DoxyParamCaption}\item[{int}]{fn,  }\item[{const std\+::string \&}]{program\+\_\+name,  }\item[{int}]{group,  }\item[{const std\+::string \&}]{fname,  }\item[{const std\+::string \&}]{lname }\end{DoxyParamCaption})}
+
+
+
+Записва студент в първи курс 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & ФН \\
+\hline
+{\em string} & име на специалност \\
+\hline
+{\em int} & група \\
+\hline
+{\em string} & име \\
+\hline
+{\em string} & фамилия \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_susi_a7d5a18086b8060430995f8de865399a8}\label{class_susi_a7d5a18086b8060430995f8de865399a8}} 
+\index{Susi@{Susi}!enrollin@{enrollin}}
+\index{enrollin@{enrollin}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{enrollin()}{enrollin()}}
+{\footnotesize\ttfamily void Susi\+::enrollin (\begin{DoxyParamCaption}\item[{int}]{fn,  }\item[{const std\+::string \&}]{course\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Записва студента с факултетен номер в дисциплината с име. 
+
+Записването е позволено само на дисциплини от съответния курс и специалност 
+\begin{DoxyParams}{Parameters}
+{\em int} & ФН \\
+\hline
+{\em string} & име на специалност \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_susi_ad996bd123ef25d812e3fc5d1717edf07}\label{class_susi_ad996bd123ef25d812e3fc5d1717edf07}} 
+\index{Susi@{Susi}!get\+Discipline@{get\+Discipline}}
+\index{get\+Discipline@{get\+Discipline}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{get\+Discipline()}{getDiscipline()}}
+{\footnotesize\ttfamily \hyperlink{class_discipline}{Discipline} Susi\+::get\+Discipline (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Намира \hyperlink{class_discipline}{Discipline} по дадено име 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & име \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Disicpline 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_susi_adebc81f1debd6b4cf54dd1db6c6ba9be}\label{class_susi_adebc81f1debd6b4cf54dd1db6c6ba9be}} 
+\index{Susi@{Susi}!get\+Program@{get\+Program}}
+\index{get\+Program@{get\+Program}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{get\+Program()}{getProgram()}}
+{\footnotesize\ttfamily \hyperlink{class_program}{Program} Susi\+::get\+Program (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Намира \hyperlink{class_program}{Program} по дадено име 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & име \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_program}{Program} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_susi_acc0db9f4d2400a50649d76f1aa41482b}\label{class_susi_acc0db9f4d2400a50649d76f1aa41482b}} 
+\index{Susi@{Susi}!get\+Student@{get\+Student}}
+\index{get\+Student@{get\+Student}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{get\+Student()}{getStudent()}}
+{\footnotesize\ttfamily \hyperlink{class_student}{Student} Susi\+::get\+Student (\begin{DoxyParamCaption}\item[{int}]{fn }\end{DoxyParamCaption}) const}
+
+
+
+Намира \hyperlink{class_student}{Student} във вектора от студенти по даден ФН, чрез \hyperlink{class_susi_a2c1e25d57c4cf29149803a4d86c8e585}{\+\_\+student\+Index()} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & ФН \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_student}{Student} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_susi_a59e196ecdbd15d01f846b442cdc9a345}\label{class_susi_a59e196ecdbd15d01f846b442cdc9a345}} 
+\index{Susi@{Susi}!graduate@{graduate}}
+\index{graduate@{graduate}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{graduate()}{graduate()}}
+{\footnotesize\ttfamily void Susi\+::graduate (\begin{DoxyParamCaption}\item[{int}]{fn }\end{DoxyParamCaption})}
+
+
+
+Отбелязва студента като завършил, но само ако е положил успешно изпити по всички записани предмети 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & ФН \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_susi_af0dc551bdb5927df3cf961cf90768566}\label{class_susi_af0dc551bdb5927df3cf961cf90768566}} 
+\index{Susi@{Susi}!interrupt@{interrupt}}
+\index{interrupt@{interrupt}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{interrupt()}{interrupt()}}
+{\footnotesize\ttfamily void Susi\+::interrupt (\begin{DoxyParamCaption}\item[{int}]{fn }\end{DoxyParamCaption})}
+
+
+
+Маркира студента с факултетен номер като прекъснал. 
+
+Прекъсналите студенти не могат да се явяват на изпити, да записват учебни дисциплини или да сменят специалност, група или курс 
+\begin{DoxyParams}{Parameters}
+{\em int} & ФН \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_susi_a130c33e1b520a6f06b876b5b547bb11b}\label{class_susi_a130c33e1b520a6f06b876b5b547bb11b}} 
+\index{Susi@{Susi}!print@{print}}
+\index{print@{print}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Susi\+::print (\begin{DoxyParamCaption}\item[{int}]{fn }\end{DoxyParamCaption}) const}
+
+
+
+Извежда справка за студента с факултетен номер 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & ФН \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_susi_a36287fc59b1d361e4f868eec9eb9771d}\label{class_susi_a36287fc59b1d361e4f868eec9eb9771d}} 
+\index{Susi@{Susi}!printall@{printall}}
+\index{printall@{printall}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{printall()}{printall()}}
+{\footnotesize\ttfamily void Susi\+::printall (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{program\+\_\+name,  }\item[{int}]{year }\end{DoxyParamCaption}) const}
+
+
+
+Извежда справка за всички студенти в дадена специалност и курс 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & име на специалност \\
+\hline
+{\em int} & курс \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_susi_a9e563066928e033a73124ee235b51d26}\label{class_susi_a9e563066928e033a73124ee235b51d26}} 
+\index{Susi@{Susi}!protocol@{protocol}}
+\index{protocol@{protocol}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{protocol()}{protocol()}}
+{\footnotesize\ttfamily void Susi\+::protocol (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{course\+\_\+name }\end{DoxyParamCaption}) const}
+
+
+
+Извежда протоколи за всички студенти, записани в дадена дисциплина. 
+
+За всяка специалност и курс се извежда отделен протокол. Студентите в протокола са подредени по факултетен номер в нарастващ ред. 
+\begin{DoxyParams}{Parameters}
+{\em string} & име на специалност \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_susi_a6511521c7645dc43a080c5921f037d8f}\label{class_susi_a6511521c7645dc43a080c5921f037d8f}} 
+\index{Susi@{Susi}!report@{report}}
+\index{report@{report}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{report()}{report()}}
+{\footnotesize\ttfamily void Susi\+::report (\begin{DoxyParamCaption}\item[{int}]{fn }\end{DoxyParamCaption}) const}
+
+
+
+Извежда академична справка за оценките на даден студент (списък с всички взети и невзети изпити, съответните оценки и успех на студента) ///. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & ФН \\
+\hline
+{\em int} & ФН \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_susi_a2294098afce61489563ac5fd9dea79ff}\label{class_susi_a2294098afce61489563ac5fd9dea79ff}} 
+\index{Susi@{Susi}!resume@{resume}}
+\index{resume@{resume}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{resume()}{resume()}}
+{\footnotesize\ttfamily void Susi\+::resume (\begin{DoxyParamCaption}\item[{int}]{fn }\end{DoxyParamCaption})}
+
+
+
+Възстановява студентските права на студента с факултетен номер 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & ФН \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_susi_a98cf9bfd27148f4a3c108ff5dcc0dd25}\label{class_susi_a98cf9bfd27148f4a3c108ff5dcc0dd25}} 
+\index{Susi@{Susi}!sort@{sort}}
+\index{sort@{sort}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily void Susi\+::sort (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{class_student}{Student} $>$ \&}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Сортираща функция (selection sort) за вектора от \hyperlink{class_student}{Student}. 
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_susi_a19986b37cae9f955a39548b141c5505d}\label{class_susi_a19986b37cae9f955a39548b141c5505d}} 
+\index{Susi@{Susi}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{class_susi}{Susi} \&}]{susi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_susi_a2cc9661c48db37bc6a525e4fe567ec23}\label{class_susi_a2cc9661c48db37bc6a525e4fe567ec23}} 
+\index{Susi@{Susi}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\hyperlink{class_susi}{Susi} \&}]{susi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_susi_a565e54b3a964048eeeb0fc08db29a483}\label{class_susi_a565e54b3a964048eeeb0fc08db29a483}} 
+\index{Susi@{Susi}!susi\+\_\+disciplines@{susi\+\_\+disciplines}}
+\index{susi\+\_\+disciplines@{susi\+\_\+disciplines}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{susi\+\_\+disciplines}{susi\_disciplines}}
+{\footnotesize\ttfamily \hyperlink{class_discipline_container}{Discipline\+Container} Susi\+::susi\+\_\+disciplines\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_susi_ae443169a57ca8f5a02cedbd857160cc4}\label{class_susi_ae443169a57ca8f5a02cedbd857160cc4}} 
+\index{Susi@{Susi}!susi\+\_\+programs@{susi\+\_\+programs}}
+\index{susi\+\_\+programs@{susi\+\_\+programs}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{susi\+\_\+programs}{susi\_programs}}
+{\footnotesize\ttfamily \hyperlink{class_program_container}{Program\+Container} Susi\+::susi\+\_\+programs\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_susi_a01120305c1d7fac67fc79a026d9579ba}\label{class_susi_a01120305c1d7fac67fc79a026d9579ba}} 
+\index{Susi@{Susi}!susi\+\_\+students@{susi\+\_\+students}}
+\index{susi\+\_\+students@{susi\+\_\+students}!Susi@{Susi}}
+\subsubsection{\texorpdfstring{susi\+\_\+students}{susi\_students}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{class_student}{Student}$>$ Susi\+::susi\+\_\+students\hspace{0.3cm}{\ttfamily [private]}}
+

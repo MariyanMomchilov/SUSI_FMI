@@ -1,0 +1,202 @@
+\hypertarget{class_program_container}{}\section{Program\+Container Class Reference}
+\label{class_program_container}\index{Program\+Container@{Program\+Container}}
+
+
+Класът представлява контейнер за \hyperlink{class_program}{Program}.  
+
+
+
+
+{\ttfamily \#include $<$progcontainer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_program_container_a1be740ee44808c1933d74eb7a44d1a17}{Program\+Container} ()=default
+\begin{DoxyCompactList}\small\item\em Конструктор по подразбиране \end{DoxyCompactList}\item 
+int \hyperlink{class_program_container_a6dc1ecf361eb185c1149d1ee6ad01645}{size} () const
+\item 
+\hyperlink{class_program}{Program} \hyperlink{class_program_container_ab43924ef5c4933e74e362d9bb0902ece}{get\+Program} (const std\+::string \&) const
+\begin{DoxyCompactList}\small\item\em Намира дадена програма по дадено име \end{DoxyCompactList}\item 
+bool \hyperlink{class_program_container_a2a4ab6a0e5eb941af91ac0644d569bab}{has\+Program} (const \hyperlink{class_program}{Program} \&) const
+\begin{DoxyCompactList}\small\item\em Проверява дали дадена програма се съдържа в контейнера \end{DoxyCompactList}\item 
+bool \hyperlink{class_program_container_a395e4e5881d1cabca7d429e386610014}{has\+Program} (const std\+::string \&) const
+\begin{DoxyCompactList}\small\item\em Проверява дали дадена програма се съдържа в контейнера \end{DoxyCompactList}\item 
+void \hyperlink{class_program_container_a9328196abac3c41551714de458faa75a}{add\+Program} (const \hyperlink{class_program}{Program} \&)
+\begin{DoxyCompactList}\small\item\em Добавя нова програма в контейнера \end{DoxyCompactList}\item 
+void \hyperlink{class_program_container_a856d6d075c9fc8410d2f5c7dbd915f7f}{remove\+Program} (const \hyperlink{class_program}{Program} \&)
+\begin{DoxyCompactList}\small\item\em Премахва дадена програма от контейнера \end{DoxyCompactList}\item 
+\hyperlink{class_program}{Program} \hyperlink{class_program_container_aa9c5c2ef50338c70e82d36b058f2c202}{operator\mbox{[}$\,$\mbox{]}} (int) const
+\begin{DoxyCompactList}\small\item\em Предефиниране на \mbox{[}\mbox{]}. \end{DoxyCompactList}\item 
+\hyperlink{class_program_container_aa60717707c10a8be7c1da4b36f78a88f}{$\sim$\+Program\+Container} ()=default
+\begin{DoxyCompactList}\small\item\em Деструктор по подразбиране \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{class_program}{Program} $>$ \hyperlink{class_program_container_a48acf6026a06116cff5ad8ec86e7a6ce}{programs}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{class_program_container_a31b13ec661243c3ed004670c91e584c7}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{class_program_container}{Program\+Container} \&pc)
+\item 
+std\+::istream \& \hyperlink{class_program_container_aa1143040c52e764c64a503d1b09fe8d2}{operator$>$$>$} (std\+::istream \&is, \hyperlink{class_program_container}{Program\+Container} \&pc)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Класът представлява контейнер за \hyperlink{class_program}{Program}. 
+
+Член-\/данни\+: вектор(масив) от \hyperlink{class_program}{Program} 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_program_container_a1be740ee44808c1933d74eb7a44d1a17}\label{class_program_container_a1be740ee44808c1933d74eb7a44d1a17}} 
+\index{Program\+Container@{Program\+Container}!Program\+Container@{Program\+Container}}
+\index{Program\+Container@{Program\+Container}!Program\+Container@{Program\+Container}}
+\subsubsection{\texorpdfstring{Program\+Container()}{ProgramContainer()}}
+{\footnotesize\ttfamily Program\+Container\+::\+Program\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Конструктор по подразбиране 
+
+\mbox{\Hypertarget{class_program_container_aa60717707c10a8be7c1da4b36f78a88f}\label{class_program_container_aa60717707c10a8be7c1da4b36f78a88f}} 
+\index{Program\+Container@{Program\+Container}!````~Program\+Container@{$\sim$\+Program\+Container}}
+\index{````~Program\+Container@{$\sim$\+Program\+Container}!Program\+Container@{Program\+Container}}
+\subsubsection{\texorpdfstring{$\sim$\+Program\+Container()}{~ProgramContainer()}}
+{\footnotesize\ttfamily Program\+Container\+::$\sim$\+Program\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Деструктор по подразбиране 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_program_container_a9328196abac3c41551714de458faa75a}\label{class_program_container_a9328196abac3c41551714de458faa75a}} 
+\index{Program\+Container@{Program\+Container}!add\+Program@{add\+Program}}
+\index{add\+Program@{add\+Program}!Program\+Container@{Program\+Container}}
+\subsubsection{\texorpdfstring{add\+Program()}{addProgram()}}
+{\footnotesize\ttfamily void Program\+Container\+::add\+Program (\begin{DoxyParamCaption}\item[{const \hyperlink{class_program}{Program} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Добавя нова програма в контейнера 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_program}{Program}} & програма \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_program_container_ab43924ef5c4933e74e362d9bb0902ece}\label{class_program_container_ab43924ef5c4933e74e362d9bb0902ece}} 
+\index{Program\+Container@{Program\+Container}!get\+Program@{get\+Program}}
+\index{get\+Program@{get\+Program}!Program\+Container@{Program\+Container}}
+\subsubsection{\texorpdfstring{get\+Program()}{getProgram()}}
+{\footnotesize\ttfamily \hyperlink{class_program}{Program} Program\+Container\+::get\+Program (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Намира дадена програма по дадено име 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & име на програмата \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_program}{Program} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_program_container_a2a4ab6a0e5eb941af91ac0644d569bab}\label{class_program_container_a2a4ab6a0e5eb941af91ac0644d569bab}} 
+\index{Program\+Container@{Program\+Container}!has\+Program@{has\+Program}}
+\index{has\+Program@{has\+Program}!Program\+Container@{Program\+Container}}
+\subsubsection{\texorpdfstring{has\+Program()}{hasProgram()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Program\+Container\+::has\+Program (\begin{DoxyParamCaption}\item[{const \hyperlink{class_program}{Program} \&}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Проверява дали дадена програма се съдържа в контейнера 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_program}{Program}} & програма \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true ако е в контейнера. false иначе 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_program_container_a395e4e5881d1cabca7d429e386610014}\label{class_program_container_a395e4e5881d1cabca7d429e386610014}} 
+\index{Program\+Container@{Program\+Container}!has\+Program@{has\+Program}}
+\index{has\+Program@{has\+Program}!Program\+Container@{Program\+Container}}
+\subsubsection{\texorpdfstring{has\+Program()}{hasProgram()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Program\+Container\+::has\+Program (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Проверява дали дадена програма се съдържа в контейнера 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & име \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true ако е в контейнера. false иначе 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_program_container_aa9c5c2ef50338c70e82d36b058f2c202}\label{class_program_container_aa9c5c2ef50338c70e82d36b058f2c202}} 
+\index{Program\+Container@{Program\+Container}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Program\+Container@{Program\+Container}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \hyperlink{class_program}{Program} Program\+Container\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Предефиниране на \mbox{[}\mbox{]}. 
+
+\mbox{\Hypertarget{class_program_container_a856d6d075c9fc8410d2f5c7dbd915f7f}\label{class_program_container_a856d6d075c9fc8410d2f5c7dbd915f7f}} 
+\index{Program\+Container@{Program\+Container}!remove\+Program@{remove\+Program}}
+\index{remove\+Program@{remove\+Program}!Program\+Container@{Program\+Container}}
+\subsubsection{\texorpdfstring{remove\+Program()}{removeProgram()}}
+{\footnotesize\ttfamily void Program\+Container\+::remove\+Program (\begin{DoxyParamCaption}\item[{const \hyperlink{class_program}{Program} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Премахва дадена програма от контейнера 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_program}{Program}} & програма \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_program_container_a6dc1ecf361eb185c1149d1ee6ad01645}\label{class_program_container_a6dc1ecf361eb185c1149d1ee6ad01645}} 
+\index{Program\+Container@{Program\+Container}!size@{size}}
+\index{size@{size}!Program\+Container@{Program\+Container}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int Program\+Container\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+int размер на контейнера 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_program_container_a31b13ec661243c3ed004670c91e584c7}\label{class_program_container_a31b13ec661243c3ed004670c91e584c7}} 
+\index{Program\+Container@{Program\+Container}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Program\+Container@{Program\+Container}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{class_program_container}{Program\+Container} \&}]{pc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_program_container_aa1143040c52e764c64a503d1b09fe8d2}\label{class_program_container_aa1143040c52e764c64a503d1b09fe8d2}} 
+\index{Program\+Container@{Program\+Container}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Program\+Container@{Program\+Container}}
+\subsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\hyperlink{class_program_container}{Program\+Container} \&}]{pc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_program_container_a48acf6026a06116cff5ad8ec86e7a6ce}\label{class_program_container_a48acf6026a06116cff5ad8ec86e7a6ce}} 
+\index{Program\+Container@{Program\+Container}!programs@{programs}}
+\index{programs@{programs}!Program\+Container@{Program\+Container}}
+\subsubsection{\texorpdfstring{programs}{programs}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{class_program}{Program}$>$ Program\+Container\+::programs\hspace{0.3cm}{\ttfamily [private]}}
+

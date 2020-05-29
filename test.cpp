@@ -1,5 +1,5 @@
 #define DOCTEST_CONFIG_IMPLEMENT
-#include "includes/doctest.h"
+#include "doctest.h"
 #include "includes/unimem.h"
 #include "includes/program.h"
 #include "includes/progcontainer.h"
@@ -154,7 +154,7 @@ TEST_CASE(" SUSI commands ")
     susi.report(1111);
 
     susi.graduate(1111);
-    CHECK(susi.getStudent(1111).getStatus() == Student::stat::Graduated);
+    CHECK(susi.getStudent(1111).getStatus() == 2);
 
     susi.enroll(1782, "Inf sys", 3, "Dimitar", "Dimov");
     susi.addGrade(1782, "UP", 3);

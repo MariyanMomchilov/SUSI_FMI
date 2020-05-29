@@ -1,0 +1,453 @@
+\hypertarget{class_student}{}\section{Student Class Reference}
+\label{class_student}\index{Student@{Student}}
+
+
+Описва даден студент в СУСИ  
+
+
+
+
+{\ttfamily \#include $<$student.\+h$>$}
+
+
+
+Inheritance diagram for Student\+:
+% FIG 0
+
+
+Collaboration diagram for Student\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d}{Student} ()
+\begin{DoxyCompactList}\small\item\em Конструктор без параметри \end{DoxyCompactList}\item 
+\hyperlink{class_student_a65d6b3a714d5c60e8c9ffbc6d64f1a69}{Student} (const std\+::string \&, const std\+::string \&, int, int, int, int)
+\begin{DoxyCompactList}\small\item\em Конструктор, приемащ като параметри име, фамилия, ФН, статус, курс, номер на група \end{DoxyCompactList}\item 
+\hyperlink{class_student_a5c162823e7c932ba957b58215ee969c1}{Student} (const std\+::string \&, const std\+::string \&, int, int, int, int, const \hyperlink{class_program}{Program} \&)
+\begin{DoxyCompactList}\small\item\em Конструктор, приемащ като параметри име, фамилия, ФН, статус, курс, номер на група, обект от тип \hyperlink{class_program}{Program}. \end{DoxyCompactList}\item 
+\hyperlink{class_student_a4bc8fcbadabef3f7b81c40536f3713b1}{Student} (const \hyperlink{class_student}{Student} \&)
+\begin{DoxyCompactList}\small\item\em Копи-\/конструктор \end{DoxyCompactList}\item 
+\hyperlink{class_student}{Student} \& \hyperlink{class_student_aea411d7956cc1712b7d0e15eb7ed0832}{operator=} (const \hyperlink{class_student}{Student} \&)
+\begin{DoxyCompactList}\small\item\em Предефиниране на =. \end{DoxyCompactList}\item 
+\hyperlink{class_student_a92d33a757275b7a237910e974cd8bd0f}{$\sim$\+Student} ()=default
+\begin{DoxyCompactList}\small\item\em Деструктор по подразбиране \end{DoxyCompactList}\item 
+int \hyperlink{class_student_a21b27deb99516d176ba91139227662b8}{get\+Status} () const
+\item 
+int \hyperlink{class_student_a66cafd1014d34eea4eb9c0e644a0b825}{get\+Year} () const
+\item 
+int \hyperlink{class_student_aa577682ad72c80d77524adada6d99ad2}{get\+Group} () const
+\item 
+\hyperlink{class_program}{Program} \hyperlink{class_student_a8cbf8bfe97a658ed07f67c6698aee6bb}{get\+Program} () const
+\item 
+bool \hyperlink{class_student_a84aa35d558891ea41302326b5879a3ae}{can\+Pass} () const
+\begin{DoxyCompactList}\small\item\em Проверява дали студентът може да премине в следващ курс \end{DoxyCompactList}\item 
+bool \hyperlink{class_student_a082a64426f8133e4e176adb50ac0b477}{can\+Graduate} () const
+\begin{DoxyCompactList}\small\item\em Проверява дали студентът може да завърши специалността \end{DoxyCompactList}\item 
+bool \hyperlink{class_student_a29d78e43e7fa033e1497fa26c02edf0f}{passed\+All} () const
+\begin{DoxyCompactList}\small\item\em Проверява дали студентът си е взел всички изпити до момента \end{DoxyCompactList}\item 
+bool \hyperlink{class_student_a21cc1d849823294752049a9eef021135}{is\+Enrolled} (const \hyperlink{class_discipline}{Discipline} \&) const
+\begin{DoxyCompactList}\small\item\em Проверява дали студентът е записан в дадена дисциплина \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \hyperlink{class_student_aeb25e6da52ead51103f0b3ee5e10953f}{get\+Grades} () const
+\begin{DoxyCompactList}\small\item\em Връща целочислен вектор(масив) от оценките на студента \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{class_discipline}{Discipline} $>$ \hyperlink{class_student_a8a82196012942702fa9af422654cc614}{get\+Discplines} () const
+\begin{DoxyCompactList}\small\item\em Връща вектор(масив) от дисциплините, в които е записан студента \end{DoxyCompactList}\item 
+double \hyperlink{class_student_a44846b4e61b3424f590b3eae4d0c58b0}{get\+Avg\+Grade} () const
+\begin{DoxyCompactList}\small\item\em Пресмята средно аритметично на оценките на студента \end{DoxyCompactList}\item 
+int \hyperlink{class_student_a8dca8d440345a65b65da10319ecdf50b}{get\+Grade} (int i) const
+\begin{DoxyCompactList}\small\item\em Дава оценката с пореден номер i във вектора от оценки \end{DoxyCompactList}\item 
+bool \hyperlink{class_student_abb6d4d284794dfd4af8277c5dacc3911}{operator==} (const \hyperlink{class_student}{Student} \&) const
+\begin{DoxyCompactList}\small\item\em Предефиниране на ==. \end{DoxyCompactList}\item 
+void \hyperlink{class_student_a2d6d1de16bb99c7678f2ef8004928d18}{set\+Status} (int stat)
+\begin{DoxyCompactList}\small\item\em Присвоява статус в диапазона\mbox{[}0, 2\mbox{]}. \end{DoxyCompactList}\item 
+void \hyperlink{class_student_a75ce18eab05c57afd31036ffa8cea201}{set\+Program} (const \hyperlink{class_program}{Program} \&)
+\begin{DoxyCompactList}\small\item\em Присвоява нова специалност на студента \end{DoxyCompactList}\item 
+void \hyperlink{class_student_ac068619857e22e8a208c47314322cd11}{set\+Year} (int y)
+\begin{DoxyCompactList}\small\item\em Присвоява курс \end{DoxyCompactList}\item 
+void \hyperlink{class_student_a144829ea7cbfa16de9bc079365388f13}{set\+Group} (int g)
+\begin{DoxyCompactList}\small\item\em Присвоява група \end{DoxyCompactList}\item 
+void \hyperlink{class_student_a3cffc2aef59a99f5c0441f1bc73b090f}{add\+Disc} (const \hyperlink{class_discipline}{Discipline} \&)
+\begin{DoxyCompactList}\small\item\em Добавя нова дисциплина в масива от дисциплини на студента \end{DoxyCompactList}\item 
+void \hyperlink{class_student_ab5a5f93a5d48e7904413de356eb89811}{add\+Grade} (const \hyperlink{class_discipline}{Discipline} \&, int)
+\begin{DoxyCompactList}\small\item\em Нанасяне на оценка по дадена дисциплина \end{DoxyCompactList}\item 
+void \hyperlink{class_student_abdbb14cd83ef23c09f811bd1e30ddd4f}{print} () const
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_student_a3f6f0d1198b3ffb8749b2f8e2b5a18c1}{status}
+\item 
+int \hyperlink{class_student_aca42f18eeeadf5428cf30a3078a97389}{year}
+\item 
+int \hyperlink{class_student_aec0553c2fba76a0c74375af5c24f92da}{group}
+\item 
+\hyperlink{class_program}{Program} \hyperlink{class_student_af35065a90ecfc87727eb1167f62688f5}{program}
+\item 
+std\+::vector$<$ \hyperlink{class_discipline}{Discipline} $>$ \hyperlink{class_student_a5fd8877a3768663196207a89c65f2e13}{disciplines}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{class_student_af7d0bacc326744ef438109be5feaf20c}{grades}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{class_student_a2f6afd7f32282f31d42e9ccf4340983d}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{class_student}{Student} \&s)
+\item 
+std\+::istream \& \hyperlink{class_student_af7032f120efacd17a8c617ed189f1294}{operator$>$$>$} (std\+::istream \&is, \hyperlink{class_student}{Student} \&s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Описва даден студент в СУСИ 
+
+Наследен от \hyperlink{class_uni_member}{Uni\+Member} 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d}\label{class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d}} 
+\index{Student@{Student}!Student@{Student}}
+\index{Student@{Student}!Student@{Student}}
+\subsubsection{\texorpdfstring{Student()}{Student()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Student\+::\+Student (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор без параметри 
+
+\mbox{\Hypertarget{class_student_a65d6b3a714d5c60e8c9ffbc6d64f1a69}\label{class_student_a65d6b3a714d5c60e8c9ffbc6d64f1a69}} 
+\index{Student@{Student}!Student@{Student}}
+\index{Student@{Student}!Student@{Student}}
+\subsubsection{\texorpdfstring{Student()}{Student()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Student\+::\+Student (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{,  }\item[{const std\+::string \&}]{,  }\item[{int}]{,  }\item[{int}]{,  }\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор, приемащ като параметри име, фамилия, ФН, статус, курс, номер на група 
+
+\mbox{\Hypertarget{class_student_a5c162823e7c932ba957b58215ee969c1}\label{class_student_a5c162823e7c932ba957b58215ee969c1}} 
+\index{Student@{Student}!Student@{Student}}
+\index{Student@{Student}!Student@{Student}}
+\subsubsection{\texorpdfstring{Student()}{Student()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Student\+::\+Student (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{,  }\item[{const std\+::string \&}]{,  }\item[{int}]{,  }\item[{int}]{,  }\item[{int}]{,  }\item[{int}]{,  }\item[{const \hyperlink{class_program}{Program} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор, приемащ като параметри име, фамилия, ФН, статус, курс, номер на група, обект от тип \hyperlink{class_program}{Program}. 
+
+\mbox{\Hypertarget{class_student_a4bc8fcbadabef3f7b81c40536f3713b1}\label{class_student_a4bc8fcbadabef3f7b81c40536f3713b1}} 
+\index{Student@{Student}!Student@{Student}}
+\index{Student@{Student}!Student@{Student}}
+\subsubsection{\texorpdfstring{Student()}{Student()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Student\+::\+Student (\begin{DoxyParamCaption}\item[{const \hyperlink{class_student}{Student} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Копи-\/конструктор 
+
+\mbox{\Hypertarget{class_student_a92d33a757275b7a237910e974cd8bd0f}\label{class_student_a92d33a757275b7a237910e974cd8bd0f}} 
+\index{Student@{Student}!````~Student@{$\sim$\+Student}}
+\index{````~Student@{$\sim$\+Student}!Student@{Student}}
+\subsubsection{\texorpdfstring{$\sim$\+Student()}{~Student()}}
+{\footnotesize\ttfamily Student\+::$\sim$\+Student (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Деструктор по подразбиране 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_student_a3cffc2aef59a99f5c0441f1bc73b090f}\label{class_student_a3cffc2aef59a99f5c0441f1bc73b090f}} 
+\index{Student@{Student}!add\+Disc@{add\+Disc}}
+\index{add\+Disc@{add\+Disc}!Student@{Student}}
+\subsubsection{\texorpdfstring{add\+Disc()}{addDisc()}}
+{\footnotesize\ttfamily void Student\+::add\+Disc (\begin{DoxyParamCaption}\item[{const \hyperlink{class_discipline}{Discipline} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Добавя нова дисциплина в масива от дисциплини на студента 
+
+При вмъкване на дисциплината се вмъква също и оценка(2) в масива от оценки \mbox{\Hypertarget{class_student_ab5a5f93a5d48e7904413de356eb89811}\label{class_student_ab5a5f93a5d48e7904413de356eb89811}} 
+\index{Student@{Student}!add\+Grade@{add\+Grade}}
+\index{add\+Grade@{add\+Grade}!Student@{Student}}
+\subsubsection{\texorpdfstring{add\+Grade()}{addGrade()}}
+{\footnotesize\ttfamily void Student\+::add\+Grade (\begin{DoxyParamCaption}\item[{const \hyperlink{class_discipline}{Discipline} \&}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Нанасяне на оценка по дадена дисциплина 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_discipline}{Discipline}} & дадената дисциплина \\
+\hline
+{\em int} & съответстващата оценка \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_student_a082a64426f8133e4e176adb50ac0b477}\label{class_student_a082a64426f8133e4e176adb50ac0b477}} 
+\index{Student@{Student}!can\+Graduate@{can\+Graduate}}
+\index{can\+Graduate@{can\+Graduate}!Student@{Student}}
+\subsubsection{\texorpdfstring{can\+Graduate()}{canGraduate()}}
+{\footnotesize\ttfamily bool Student\+::can\+Graduate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Проверява дали студентът може да завърши специалността 
+
+\begin{DoxyReturn}{Returns}
+true ако студентът е в най-\/горния за специалността, взел е всички изпити и е събрал нужните кредити. false иначе 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_student_a84aa35d558891ea41302326b5879a3ae}\label{class_student_a84aa35d558891ea41302326b5879a3ae}} 
+\index{Student@{Student}!can\+Pass@{can\+Pass}}
+\index{can\+Pass@{can\+Pass}!Student@{Student}}
+\subsubsection{\texorpdfstring{can\+Pass()}{canPass()}}
+{\footnotesize\ttfamily bool Student\+::can\+Pass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Проверява дали студентът може да премине в следващ курс 
+
+\begin{DoxyReturn}{Returns}
+true ако студентът е има невзети по-\/малко от 3 изпита, false иначе 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_student_a44846b4e61b3424f590b3eae4d0c58b0}\label{class_student_a44846b4e61b3424f590b3eae4d0c58b0}} 
+\index{Student@{Student}!get\+Avg\+Grade@{get\+Avg\+Grade}}
+\index{get\+Avg\+Grade@{get\+Avg\+Grade}!Student@{Student}}
+\subsubsection{\texorpdfstring{get\+Avg\+Grade()}{getAvgGrade()}}
+{\footnotesize\ttfamily double Student\+::get\+Avg\+Grade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Пресмята средно аритметично на оценките на студента 
+
+\mbox{\Hypertarget{class_student_a8a82196012942702fa9af422654cc614}\label{class_student_a8a82196012942702fa9af422654cc614}} 
+\index{Student@{Student}!get\+Discplines@{get\+Discplines}}
+\index{get\+Discplines@{get\+Discplines}!Student@{Student}}
+\subsubsection{\texorpdfstring{get\+Discplines()}{getDiscplines()}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{class_discipline}{Discipline}$>$ Student\+::get\+Discplines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Връща вектор(масив) от дисциплините, в които е записан студента 
+
+\begin{DoxyReturn}{Returns}
+vector$<$\+Discipline$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_student_a8dca8d440345a65b65da10319ecdf50b}\label{class_student_a8dca8d440345a65b65da10319ecdf50b}} 
+\index{Student@{Student}!get\+Grade@{get\+Grade}}
+\index{get\+Grade@{get\+Grade}!Student@{Student}}
+\subsubsection{\texorpdfstring{get\+Grade()}{getGrade()}}
+{\footnotesize\ttfamily int Student\+::get\+Grade (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Дава оценката с пореден номер i във вектора от оценки 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_student_aeb25e6da52ead51103f0b3ee5e10953f}\label{class_student_aeb25e6da52ead51103f0b3ee5e10953f}} 
+\index{Student@{Student}!get\+Grades@{get\+Grades}}
+\index{get\+Grades@{get\+Grades}!Student@{Student}}
+\subsubsection{\texorpdfstring{get\+Grades()}{getGrades()}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Student\+::get\+Grades (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Връща целочислен вектор(масив) от оценките на студента 
+
+\mbox{\Hypertarget{class_student_aa577682ad72c80d77524adada6d99ad2}\label{class_student_aa577682ad72c80d77524adada6d99ad2}} 
+\index{Student@{Student}!get\+Group@{get\+Group}}
+\index{get\+Group@{get\+Group}!Student@{Student}}
+\subsubsection{\texorpdfstring{get\+Group()}{getGroup()}}
+{\footnotesize\ttfamily int Student\+::get\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Групата на студента 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_student_a8cbf8bfe97a658ed07f67c6698aee6bb}\label{class_student_a8cbf8bfe97a658ed07f67c6698aee6bb}} 
+\index{Student@{Student}!get\+Program@{get\+Program}}
+\index{get\+Program@{get\+Program}!Student@{Student}}
+\subsubsection{\texorpdfstring{get\+Program()}{getProgram()}}
+{\footnotesize\ttfamily \hyperlink{class_program}{Program} Student\+::get\+Program (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Обект от тип \hyperlink{class_program}{Program}, съдържащ информация за специалността на студента 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_student_a21b27deb99516d176ba91139227662b8}\label{class_student_a21b27deb99516d176ba91139227662b8}} 
+\index{Student@{Student}!get\+Status@{get\+Status}}
+\index{get\+Status@{get\+Status}!Student@{Student}}
+\subsubsection{\texorpdfstring{get\+Status()}{getStatus()}}
+{\footnotesize\ttfamily int Student\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Статусът на студента 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_student_a66cafd1014d34eea4eb9c0e644a0b825}\label{class_student_a66cafd1014d34eea4eb9c0e644a0b825}} 
+\index{Student@{Student}!get\+Year@{get\+Year}}
+\index{get\+Year@{get\+Year}!Student@{Student}}
+\subsubsection{\texorpdfstring{get\+Year()}{getYear()}}
+{\footnotesize\ttfamily int Student\+::get\+Year (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Текущият курс на студента 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_student_a21cc1d849823294752049a9eef021135}\label{class_student_a21cc1d849823294752049a9eef021135}} 
+\index{Student@{Student}!is\+Enrolled@{is\+Enrolled}}
+\index{is\+Enrolled@{is\+Enrolled}!Student@{Student}}
+\subsubsection{\texorpdfstring{is\+Enrolled()}{isEnrolled()}}
+{\footnotesize\ttfamily bool Student\+::is\+Enrolled (\begin{DoxyParamCaption}\item[{const \hyperlink{class_discipline}{Discipline} \&}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Проверява дали студентът е записан в дадена дисциплина 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_discipline}{Discipline}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true ако студентът е взел всички изпити до момента. false иначе 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_student_aea411d7956cc1712b7d0e15eb7ed0832}\label{class_student_aea411d7956cc1712b7d0e15eb7ed0832}} 
+\index{Student@{Student}!operator=@{operator=}}
+\index{operator=@{operator=}!Student@{Student}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_student}{Student}\& Student\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_student}{Student} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Предефиниране на =. 
+
+\mbox{\Hypertarget{class_student_abb6d4d284794dfd4af8277c5dacc3911}\label{class_student_abb6d4d284794dfd4af8277c5dacc3911}} 
+\index{Student@{Student}!operator==@{operator==}}
+\index{operator==@{operator==}!Student@{Student}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Student\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_student}{Student} \&}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Предефиниране на ==. 
+
+\mbox{\Hypertarget{class_student_a29d78e43e7fa033e1497fa26c02edf0f}\label{class_student_a29d78e43e7fa033e1497fa26c02edf0f}} 
+\index{Student@{Student}!passed\+All@{passed\+All}}
+\index{passed\+All@{passed\+All}!Student@{Student}}
+\subsubsection{\texorpdfstring{passed\+All()}{passedAll()}}
+{\footnotesize\ttfamily bool Student\+::passed\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Проверява дали студентът си е взел всички изпити до момента 
+
+\begin{DoxyReturn}{Returns}
+true ако студентът е взел всички изпити до момента. false иначе 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_student_abdbb14cd83ef23c09f811bd1e30ddd4f}\label{class_student_abdbb14cd83ef23c09f811bd1e30ddd4f}} 
+\index{Student@{Student}!print@{print}}
+\index{print@{print}!Student@{Student}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Student\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_student_a144829ea7cbfa16de9bc079365388f13}\label{class_student_a144829ea7cbfa16de9bc079365388f13}} 
+\index{Student@{Student}!set\+Group@{set\+Group}}
+\index{set\+Group@{set\+Group}!Student@{Student}}
+\subsubsection{\texorpdfstring{set\+Group()}{setGroup()}}
+{\footnotesize\ttfamily void Student\+::set\+Group (\begin{DoxyParamCaption}\item[{int}]{g }\end{DoxyParamCaption})}
+
+
+
+Присвоява група 
+
+\mbox{\Hypertarget{class_student_a75ce18eab05c57afd31036ffa8cea201}\label{class_student_a75ce18eab05c57afd31036ffa8cea201}} 
+\index{Student@{Student}!set\+Program@{set\+Program}}
+\index{set\+Program@{set\+Program}!Student@{Student}}
+\subsubsection{\texorpdfstring{set\+Program()}{setProgram()}}
+{\footnotesize\ttfamily void Student\+::set\+Program (\begin{DoxyParamCaption}\item[{const \hyperlink{class_program}{Program} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Присвоява нова специалност на студента 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_program}{Program}} & Новата специалност \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_student_a2d6d1de16bb99c7678f2ef8004928d18}\label{class_student_a2d6d1de16bb99c7678f2ef8004928d18}} 
+\index{Student@{Student}!set\+Status@{set\+Status}}
+\index{set\+Status@{set\+Status}!Student@{Student}}
+\subsubsection{\texorpdfstring{set\+Status()}{setStatus()}}
+{\footnotesize\ttfamily void Student\+::set\+Status (\begin{DoxyParamCaption}\item[{int}]{stat }\end{DoxyParamCaption})}
+
+
+
+Присвоява статус в диапазона\mbox{[}0, 2\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stat} & нов статус \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_student_ac068619857e22e8a208c47314322cd11}\label{class_student_ac068619857e22e8a208c47314322cd11}} 
+\index{Student@{Student}!set\+Year@{set\+Year}}
+\index{set\+Year@{set\+Year}!Student@{Student}}
+\subsubsection{\texorpdfstring{set\+Year()}{setYear()}}
+{\footnotesize\ttfamily void Student\+::set\+Year (\begin{DoxyParamCaption}\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Присвоява курс 
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_student_a2f6afd7f32282f31d42e9ccf4340983d}\label{class_student_a2f6afd7f32282f31d42e9ccf4340983d}} 
+\index{Student@{Student}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Student@{Student}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{class_student}{Student} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_student_af7032f120efacd17a8c617ed189f1294}\label{class_student_af7032f120efacd17a8c617ed189f1294}} 
+\index{Student@{Student}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Student@{Student}}
+\subsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\hyperlink{class_student}{Student} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_student_a5fd8877a3768663196207a89c65f2e13}\label{class_student_a5fd8877a3768663196207a89c65f2e13}} 
+\index{Student@{Student}!disciplines@{disciplines}}
+\index{disciplines@{disciplines}!Student@{Student}}
+\subsubsection{\texorpdfstring{disciplines}{disciplines}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{class_discipline}{Discipline}$>$ Student\+::disciplines\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_student_af7d0bacc326744ef438109be5feaf20c}\label{class_student_af7d0bacc326744ef438109be5feaf20c}} 
+\index{Student@{Student}!grades@{grades}}
+\index{grades@{grades}!Student@{Student}}
+\subsubsection{\texorpdfstring{grades}{grades}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Student\+::grades\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_student_aec0553c2fba76a0c74375af5c24f92da}\label{class_student_aec0553c2fba76a0c74375af5c24f92da}} 
+\index{Student@{Student}!group@{group}}
+\index{group@{group}!Student@{Student}}
+\subsubsection{\texorpdfstring{group}{group}}
+{\footnotesize\ttfamily int Student\+::group\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_student_af35065a90ecfc87727eb1167f62688f5}\label{class_student_af35065a90ecfc87727eb1167f62688f5}} 
+\index{Student@{Student}!program@{program}}
+\index{program@{program}!Student@{Student}}
+\subsubsection{\texorpdfstring{program}{program}}
+{\footnotesize\ttfamily \hyperlink{class_program}{Program} Student\+::program\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_student_a3f6f0d1198b3ffb8749b2f8e2b5a18c1}\label{class_student_a3f6f0d1198b3ffb8749b2f8e2b5a18c1}} 
+\index{Student@{Student}!status@{status}}
+\index{status@{status}!Student@{Student}}
+\subsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily int Student\+::status\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_student_aca42f18eeeadf5428cf30a3078a97389}\label{class_student_aca42f18eeeadf5428cf30a3078a97389}} 
+\index{Student@{Student}!year@{year}}
+\index{year@{year}!Student@{Student}}
+\subsubsection{\texorpdfstring{year}{year}}
+{\footnotesize\ttfamily int Student\+::year\hspace{0.3cm}{\ttfamily [private]}}
+

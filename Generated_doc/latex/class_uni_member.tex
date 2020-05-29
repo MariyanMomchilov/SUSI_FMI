@@ -1,0 +1,200 @@
+\hypertarget{class_uni_member}{}\section{Uni\+Member Class Reference}
+\label{class_uni_member}\index{Uni\+Member@{Uni\+Member}}
+
+
+Клас, описващ човек, обвързан с Университета  
+
+
+
+
+{\ttfamily \#include $<$unimem.\+h$>$}
+
+
+
+Inheritance diagram for Uni\+Member\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_uni_member_a421f3bbcb1c24efda7d9db2817115c11}{Uni\+Member} ()
+\begin{DoxyCompactList}\small\item\em Kонструктор без параметри \end{DoxyCompactList}\item 
+\hyperlink{class_uni_member_acb2e9cc54f0e8460d9db7f764966bbf3}{Uni\+Member} (const std\+::string \&, const std\+::string \&, int)
+\begin{DoxyCompactList}\small\item\em Конструктор с параметри за име, фамилия, ФН \end{DoxyCompactList}\item 
+\hyperlink{class_uni_member_a3a13cd99a8ccb8349350728bbb5db627}{Uni\+Member} (const \hyperlink{class_uni_member}{Uni\+Member} \&)
+\begin{DoxyCompactList}\small\item\em Копи-\/конструктор \end{DoxyCompactList}\item 
+\hyperlink{class_uni_member}{Uni\+Member} \& \hyperlink{class_uni_member_a7f2686113c609f487896e7bc57bd3d94}{operator=} (const \hyperlink{class_uni_member}{Uni\+Member} \&)
+\begin{DoxyCompactList}\small\item\em Предефиниране на =. \end{DoxyCompactList}\item 
+bool \hyperlink{class_uni_member_abb98661e8d9950b55b3f647d0c9656f7}{operator==} (const \hyperlink{class_uni_member}{Uni\+Member} \&) const
+\begin{DoxyCompactList}\small\item\em Предефиниране на =. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_uni_member_a6b68bae0efeb222dc9613ebe84870331}{$\sim$\+Uni\+Member} ()=default
+\begin{DoxyCompactList}\small\item\em Деструктор по подразбиране \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_uni_member_ae954a856ad320eff703c3efe312ebece}{get\+Fname} () const
+\item 
+std\+::string \hyperlink{class_uni_member_a312319a40d4a1d1a7c2667121a6f3469}{get\+Lname} () const
+\item 
+int \hyperlink{class_uni_member_ab1de8aa08354456fafb30a946564e6c4}{get\+Fnumber} () const
+\item 
+void \hyperlink{class_uni_member_afe68f8430ad033de7f87960946e29038}{set\+Fname} (const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em Присвоява стойност на име \end{DoxyCompactList}\item 
+void \hyperlink{class_uni_member_a345f73ca3ae57f45643552ba1d01a02e}{set\+Lname} (const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em Присвоява стойност на фамилия \end{DoxyCompactList}\item 
+void \hyperlink{class_uni_member_ad979c7e5a0fe22e5928c8cc71964a8e2}{set\+Fnumber} (int)
+\begin{DoxyCompactList}\small\item\em Присвоява стойност на ФН \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{class_uni_member_a5f7b13ce8bdca84434a9efe78b6c7fcc}{f\+Name}
+\item 
+std\+::string \hyperlink{class_uni_member_a8a67cfc2e07415052346918f915aeca6}{l\+Name}
+\item 
+int \hyperlink{class_uni_member_aa4eab80b1f944ae3a2ff150db313ecb4}{facN}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Клас, описващ човек, обвързан с Университета 
+
+Този клас е създаден с цел да е базов за всички типове хора в Университета (Студенти, Преподаватели и т.\+н) 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_uni_member_a421f3bbcb1c24efda7d9db2817115c11}\label{class_uni_member_a421f3bbcb1c24efda7d9db2817115c11}} 
+\index{Uni\+Member@{Uni\+Member}!Uni\+Member@{Uni\+Member}}
+\index{Uni\+Member@{Uni\+Member}!Uni\+Member@{Uni\+Member}}
+\subsubsection{\texorpdfstring{Uni\+Member()}{UniMember()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Uni\+Member\+::\+Uni\+Member (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Kонструктор без параметри 
+
+\mbox{\Hypertarget{class_uni_member_acb2e9cc54f0e8460d9db7f764966bbf3}\label{class_uni_member_acb2e9cc54f0e8460d9db7f764966bbf3}} 
+\index{Uni\+Member@{Uni\+Member}!Uni\+Member@{Uni\+Member}}
+\index{Uni\+Member@{Uni\+Member}!Uni\+Member@{Uni\+Member}}
+\subsubsection{\texorpdfstring{Uni\+Member()}{UniMember()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Uni\+Member\+::\+Uni\+Member (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{,  }\item[{const std\+::string \&}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор с параметри за име, фамилия, ФН 
+
+\mbox{\Hypertarget{class_uni_member_a3a13cd99a8ccb8349350728bbb5db627}\label{class_uni_member_a3a13cd99a8ccb8349350728bbb5db627}} 
+\index{Uni\+Member@{Uni\+Member}!Uni\+Member@{Uni\+Member}}
+\index{Uni\+Member@{Uni\+Member}!Uni\+Member@{Uni\+Member}}
+\subsubsection{\texorpdfstring{Uni\+Member()}{UniMember()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Uni\+Member\+::\+Uni\+Member (\begin{DoxyParamCaption}\item[{const \hyperlink{class_uni_member}{Uni\+Member} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Копи-\/конструктор 
+
+\mbox{\Hypertarget{class_uni_member_a6b68bae0efeb222dc9613ebe84870331}\label{class_uni_member_a6b68bae0efeb222dc9613ebe84870331}} 
+\index{Uni\+Member@{Uni\+Member}!````~Uni\+Member@{$\sim$\+Uni\+Member}}
+\index{````~Uni\+Member@{$\sim$\+Uni\+Member}!Uni\+Member@{Uni\+Member}}
+\subsubsection{\texorpdfstring{$\sim$\+Uni\+Member()}{~UniMember()}}
+{\footnotesize\ttfamily virtual Uni\+Member\+::$\sim$\+Uni\+Member (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Деструктор по подразбиране 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_uni_member_ae954a856ad320eff703c3efe312ebece}\label{class_uni_member_ae954a856ad320eff703c3efe312ebece}} 
+\index{Uni\+Member@{Uni\+Member}!get\+Fname@{get\+Fname}}
+\index{get\+Fname@{get\+Fname}!Uni\+Member@{Uni\+Member}}
+\subsubsection{\texorpdfstring{get\+Fname()}{getFname()}}
+{\footnotesize\ttfamily std\+::string Uni\+Member\+::get\+Fname (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+string име 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_uni_member_ab1de8aa08354456fafb30a946564e6c4}\label{class_uni_member_ab1de8aa08354456fafb30a946564e6c4}} 
+\index{Uni\+Member@{Uni\+Member}!get\+Fnumber@{get\+Fnumber}}
+\index{get\+Fnumber@{get\+Fnumber}!Uni\+Member@{Uni\+Member}}
+\subsubsection{\texorpdfstring{get\+Fnumber()}{getFnumber()}}
+{\footnotesize\ttfamily int Uni\+Member\+::get\+Fnumber (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+int ФН 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_uni_member_a312319a40d4a1d1a7c2667121a6f3469}\label{class_uni_member_a312319a40d4a1d1a7c2667121a6f3469}} 
+\index{Uni\+Member@{Uni\+Member}!get\+Lname@{get\+Lname}}
+\index{get\+Lname@{get\+Lname}!Uni\+Member@{Uni\+Member}}
+\subsubsection{\texorpdfstring{get\+Lname()}{getLname()}}
+{\footnotesize\ttfamily std\+::string Uni\+Member\+::get\+Lname (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+string фамилия 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_uni_member_a7f2686113c609f487896e7bc57bd3d94}\label{class_uni_member_a7f2686113c609f487896e7bc57bd3d94}} 
+\index{Uni\+Member@{Uni\+Member}!operator=@{operator=}}
+\index{operator=@{operator=}!Uni\+Member@{Uni\+Member}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_uni_member}{Uni\+Member}\& Uni\+Member\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_uni_member}{Uni\+Member} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Предефиниране на =. 
+
+\mbox{\Hypertarget{class_uni_member_abb98661e8d9950b55b3f647d0c9656f7}\label{class_uni_member_abb98661e8d9950b55b3f647d0c9656f7}} 
+\index{Uni\+Member@{Uni\+Member}!operator==@{operator==}}
+\index{operator==@{operator==}!Uni\+Member@{Uni\+Member}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Uni\+Member\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_uni_member}{Uni\+Member} \&}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Предефиниране на =. 
+
+\mbox{\Hypertarget{class_uni_member_afe68f8430ad033de7f87960946e29038}\label{class_uni_member_afe68f8430ad033de7f87960946e29038}} 
+\index{Uni\+Member@{Uni\+Member}!set\+Fname@{set\+Fname}}
+\index{set\+Fname@{set\+Fname}!Uni\+Member@{Uni\+Member}}
+\subsubsection{\texorpdfstring{set\+Fname()}{setFname()}}
+{\footnotesize\ttfamily void Uni\+Member\+::set\+Fname (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Присвоява стойност на име 
+
+\mbox{\Hypertarget{class_uni_member_ad979c7e5a0fe22e5928c8cc71964a8e2}\label{class_uni_member_ad979c7e5a0fe22e5928c8cc71964a8e2}} 
+\index{Uni\+Member@{Uni\+Member}!set\+Fnumber@{set\+Fnumber}}
+\index{set\+Fnumber@{set\+Fnumber}!Uni\+Member@{Uni\+Member}}
+\subsubsection{\texorpdfstring{set\+Fnumber()}{setFnumber()}}
+{\footnotesize\ttfamily void Uni\+Member\+::set\+Fnumber (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Присвоява стойност на ФН 
+
+\mbox{\Hypertarget{class_uni_member_a345f73ca3ae57f45643552ba1d01a02e}\label{class_uni_member_a345f73ca3ae57f45643552ba1d01a02e}} 
+\index{Uni\+Member@{Uni\+Member}!set\+Lname@{set\+Lname}}
+\index{set\+Lname@{set\+Lname}!Uni\+Member@{Uni\+Member}}
+\subsubsection{\texorpdfstring{set\+Lname()}{setLname()}}
+{\footnotesize\ttfamily void Uni\+Member\+::set\+Lname (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Присвоява стойност на фамилия 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_uni_member_aa4eab80b1f944ae3a2ff150db313ecb4}\label{class_uni_member_aa4eab80b1f944ae3a2ff150db313ecb4}} 
+\index{Uni\+Member@{Uni\+Member}!facN@{facN}}
+\index{facN@{facN}!Uni\+Member@{Uni\+Member}}
+\subsubsection{\texorpdfstring{facN}{facN}}
+{\footnotesize\ttfamily int Uni\+Member\+::facN\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_uni_member_a5f7b13ce8bdca84434a9efe78b6c7fcc}\label{class_uni_member_a5f7b13ce8bdca84434a9efe78b6c7fcc}} 
+\index{Uni\+Member@{Uni\+Member}!f\+Name@{f\+Name}}
+\index{f\+Name@{f\+Name}!Uni\+Member@{Uni\+Member}}
+\subsubsection{\texorpdfstring{f\+Name}{fName}}
+{\footnotesize\ttfamily std\+::string Uni\+Member\+::f\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_uni_member_a8a67cfc2e07415052346918f915aeca6}\label{class_uni_member_a8a67cfc2e07415052346918f915aeca6}} 
+\index{Uni\+Member@{Uni\+Member}!l\+Name@{l\+Name}}
+\index{l\+Name@{l\+Name}!Uni\+Member@{Uni\+Member}}
+\subsubsection{\texorpdfstring{l\+Name}{lName}}
+{\footnotesize\ttfamily std\+::string Uni\+Member\+::l\+Name\hspace{0.3cm}{\ttfamily [private]}}
+

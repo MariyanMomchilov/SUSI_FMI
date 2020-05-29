@@ -1,0 +1,201 @@
+\hypertarget{class_discipline}{}\section{Discipline Class Reference}
+\label{class_discipline}\index{Discipline@{Discipline}}
+
+
+Описва диспиплина в СУСИ  
+
+
+
+
+{\ttfamily \#include $<$discipline.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_discipline_a61b734e60c960dbda6ec72dc804a0b2b}{Discipline} ()
+\begin{DoxyCompactList}\small\item\em Конструктор без параметри \end{DoxyCompactList}\item 
+\hyperlink{class_discipline_a5f01ef5ac0cbaa3d4481ea4ad86c4688}{Discipline} (std\+::string, int, int, int)
+\begin{DoxyCompactList}\small\item\em Конструктор приемащ за параметри име, тип, необходим курс за записване, кредити \end{DoxyCompactList}\item 
+\hyperlink{class_discipline_a5053a2810a87a20352ea5fc17a13dad5}{Discipline} (const \hyperlink{class_discipline}{Discipline} \&)
+\begin{DoxyCompactList}\small\item\em Копи-\/конструктор \end{DoxyCompactList}\item 
+\hyperlink{class_discipline}{Discipline} \& \hyperlink{class_discipline_a7dfde4e359542c96d51abdfd3b82b1d5}{operator=} (const \hyperlink{class_discipline}{Discipline} \&)
+\begin{DoxyCompactList}\small\item\em Предефиниране на =. \end{DoxyCompactList}\item 
+\hyperlink{class_discipline_a454f8a0a084b1ff964752c288d54032a}{$\sim$\+Discipline} ()=default
+\begin{DoxyCompactList}\small\item\em Деструктор по подразбиране \end{DoxyCompactList}\item 
+bool \hyperlink{class_discipline_a44dbd9000f68f726aeed2bfcab64daf9}{operator==} (const \hyperlink{class_discipline}{Discipline} \&) const
+\begin{DoxyCompactList}\small\item\em Предефиниране на ==. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_discipline_a13083fc60e9af78fb960d9a20d298f78}{get\+Name} () const
+\item 
+int \hyperlink{class_discipline_a54a87ad8c274c6ea4583b9d459416123}{get\+Type} () const
+\item 
+int \hyperlink{class_discipline_a4218ae936c5cc7615c631d425b0236a1}{get\+Required\+Course} () const
+\item 
+int \hyperlink{class_discipline_a03a84c2333ece637b1f144bb0e947cc0}{get\+Credits} () const
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{class_discipline_aafa65128240ca298b7946e1c308c0d89}{name}
+\item 
+int \hyperlink{class_discipline_aef1d2d599f850961fb622cc726a79dca}{type}
+\item 
+int \hyperlink{class_discipline_a6b0447749bfb0daa386528721049d75e}{required\+Course}
+\item 
+int \hyperlink{class_discipline_a7285de200405bf7a8f7e56ddddc8cf4d}{credits}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{class_discipline_a70a18bd0fe28be947317cf0e06e58942}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{class_discipline}{Discipline} \&obj)
+\item 
+std\+::istream \& \hyperlink{class_discipline_a8ef3bb5be1ffee2afd412602b0cdc57b}{operator$>$$>$} (std\+::istream \&is, \hyperlink{class_discipline}{Discipline} \&obj)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Описва диспиплина в СУСИ 
+
+Класът съдържа член-\/данни за име, тип(задължителна -\/ 0/избираема -\/ 1), необходим курс на студента за записване на тази дисциплина, брой кредити(задължителните носят 0) 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_discipline_a61b734e60c960dbda6ec72dc804a0b2b}\label{class_discipline_a61b734e60c960dbda6ec72dc804a0b2b}} 
+\index{Discipline@{Discipline}!Discipline@{Discipline}}
+\index{Discipline@{Discipline}!Discipline@{Discipline}}
+\subsubsection{\texorpdfstring{Discipline()}{Discipline()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Discipline\+::\+Discipline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор без параметри 
+
+\mbox{\Hypertarget{class_discipline_a5f01ef5ac0cbaa3d4481ea4ad86c4688}\label{class_discipline_a5f01ef5ac0cbaa3d4481ea4ad86c4688}} 
+\index{Discipline@{Discipline}!Discipline@{Discipline}}
+\index{Discipline@{Discipline}!Discipline@{Discipline}}
+\subsubsection{\texorpdfstring{Discipline()}{Discipline()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Discipline\+::\+Discipline (\begin{DoxyParamCaption}\item[{std\+::string}]{,  }\item[{int}]{,  }\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор приемащ за параметри име, тип, необходим курс за записване, кредити 
+
+\mbox{\Hypertarget{class_discipline_a5053a2810a87a20352ea5fc17a13dad5}\label{class_discipline_a5053a2810a87a20352ea5fc17a13dad5}} 
+\index{Discipline@{Discipline}!Discipline@{Discipline}}
+\index{Discipline@{Discipline}!Discipline@{Discipline}}
+\subsubsection{\texorpdfstring{Discipline()}{Discipline()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Discipline\+::\+Discipline (\begin{DoxyParamCaption}\item[{const \hyperlink{class_discipline}{Discipline} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Копи-\/конструктор 
+
+\mbox{\Hypertarget{class_discipline_a454f8a0a084b1ff964752c288d54032a}\label{class_discipline_a454f8a0a084b1ff964752c288d54032a}} 
+\index{Discipline@{Discipline}!````~Discipline@{$\sim$\+Discipline}}
+\index{````~Discipline@{$\sim$\+Discipline}!Discipline@{Discipline}}
+\subsubsection{\texorpdfstring{$\sim$\+Discipline()}{~Discipline()}}
+{\footnotesize\ttfamily Discipline\+::$\sim$\+Discipline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Деструктор по подразбиране 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_discipline_a03a84c2333ece637b1f144bb0e947cc0}\label{class_discipline_a03a84c2333ece637b1f144bb0e947cc0}} 
+\index{Discipline@{Discipline}!get\+Credits@{get\+Credits}}
+\index{get\+Credits@{get\+Credits}!Discipline@{Discipline}}
+\subsubsection{\texorpdfstring{get\+Credits()}{getCredits()}}
+{\footnotesize\ttfamily int Discipline\+::get\+Credits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+int брой кредити 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_discipline_a13083fc60e9af78fb960d9a20d298f78}\label{class_discipline_a13083fc60e9af78fb960d9a20d298f78}} 
+\index{Discipline@{Discipline}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Discipline@{Discipline}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily std\+::string Discipline\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+string име 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_discipline_a4218ae936c5cc7615c631d425b0236a1}\label{class_discipline_a4218ae936c5cc7615c631d425b0236a1}} 
+\index{Discipline@{Discipline}!get\+Required\+Course@{get\+Required\+Course}}
+\index{get\+Required\+Course@{get\+Required\+Course}!Discipline@{Discipline}}
+\subsubsection{\texorpdfstring{get\+Required\+Course()}{getRequiredCourse()}}
+{\footnotesize\ttfamily int Discipline\+::get\+Required\+Course (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+int необходим курс за да се запише дисциплината 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_discipline_a54a87ad8c274c6ea4583b9d459416123}\label{class_discipline_a54a87ad8c274c6ea4583b9d459416123}} 
+\index{Discipline@{Discipline}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Discipline@{Discipline}}
+\subsubsection{\texorpdfstring{get\+Type()}{getType()}}
+{\footnotesize\ttfamily int Discipline\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+int тип 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_discipline_a7dfde4e359542c96d51abdfd3b82b1d5}\label{class_discipline_a7dfde4e359542c96d51abdfd3b82b1d5}} 
+\index{Discipline@{Discipline}!operator=@{operator=}}
+\index{operator=@{operator=}!Discipline@{Discipline}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_discipline}{Discipline}\& Discipline\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_discipline}{Discipline} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Предефиниране на =. 
+
+\mbox{\Hypertarget{class_discipline_a44dbd9000f68f726aeed2bfcab64daf9}\label{class_discipline_a44dbd9000f68f726aeed2bfcab64daf9}} 
+\index{Discipline@{Discipline}!operator==@{operator==}}
+\index{operator==@{operator==}!Discipline@{Discipline}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Discipline\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_discipline}{Discipline} \&}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Предефиниране на ==. 
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_discipline_a70a18bd0fe28be947317cf0e06e58942}\label{class_discipline_a70a18bd0fe28be947317cf0e06e58942}} 
+\index{Discipline@{Discipline}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Discipline@{Discipline}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{class_discipline}{Discipline} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_discipline_a8ef3bb5be1ffee2afd412602b0cdc57b}\label{class_discipline_a8ef3bb5be1ffee2afd412602b0cdc57b}} 
+\index{Discipline@{Discipline}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Discipline@{Discipline}}
+\subsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\hyperlink{class_discipline}{Discipline} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_discipline_a7285de200405bf7a8f7e56ddddc8cf4d}\label{class_discipline_a7285de200405bf7a8f7e56ddddc8cf4d}} 
+\index{Discipline@{Discipline}!credits@{credits}}
+\index{credits@{credits}!Discipline@{Discipline}}
+\subsubsection{\texorpdfstring{credits}{credits}}
+{\footnotesize\ttfamily int Discipline\+::credits\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_discipline_aafa65128240ca298b7946e1c308c0d89}\label{class_discipline_aafa65128240ca298b7946e1c308c0d89}} 
+\index{Discipline@{Discipline}!name@{name}}
+\index{name@{name}!Discipline@{Discipline}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Discipline\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_discipline_a6b0447749bfb0daa386528721049d75e}\label{class_discipline_a6b0447749bfb0daa386528721049d75e}} 
+\index{Discipline@{Discipline}!required\+Course@{required\+Course}}
+\index{required\+Course@{required\+Course}!Discipline@{Discipline}}
+\subsubsection{\texorpdfstring{required\+Course}{requiredCourse}}
+{\footnotesize\ttfamily int Discipline\+::required\+Course\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_discipline_aef1d2d599f850961fb622cc726a79dca}\label{class_discipline_aef1d2d599f850961fb622cc726a79dca}} 
+\index{Discipline@{Discipline}!type@{type}}
+\index{type@{type}!Discipline@{Discipline}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily int Discipline\+::type\hspace{0.3cm}{\ttfamily [private]}}
+

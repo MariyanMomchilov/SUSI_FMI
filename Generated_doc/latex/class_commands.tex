@@ -1,0 +1,188 @@
+\hypertarget{class_commands}{}\section{Commands Class Reference}
+\label{class_commands}\index{Commands@{Commands}}
+
+
+Класът се използва за работа с командният ред  
+
+
+
+
+{\ttfamily \#include $<$commands.\+h$>$}
+
+
+
+Collaboration diagram for Commands\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_commands_a5074950eaa028c7b44005a3c84870344}{Commands} ()=default
+\begin{DoxyCompactList}\small\item\em Конструктор по подразбиране \end{DoxyCompactList}\item 
+\hyperlink{class_commands_a50e97e2c1cc38b6b84252cac9af09f3d}{Commands} (const std\+::string \&)=delete
+\item 
+void \hyperlink{class_commands_aa9562e12c94ab654035a1c08bc04f377}{process} (std\+::string \&)
+\begin{DoxyCompactList}\small\item\em Изпълнява командата получена от командния ред ако е правилна \end{DoxyCompactList}\item 
+void \hyperlink{class_commands_a20c079b35574ed9f13dd29cee68f25f9}{write} ()
+\begin{DoxyCompactList}\small\item\em Зарежда информацията от файла в обекта \hyperlink{class_susi}{Susi}. \end{DoxyCompactList}\item 
+void \hyperlink{class_commands_acd316fdb9569d4b2a7860ca86d7af6c1}{read} ()
+\begin{DoxyCompactList}\small\item\em Записва информацията от \hyperlink{class_susi}{Susi} във файла \end{DoxyCompactList}\item 
+void \hyperlink{class_commands_a3a46d1e3934cfe1999476486473ad64c}{write} (std\+::ostream \&os)
+\begin{DoxyCompactList}\small\item\em Записва информацията от \hyperlink{class_susi}{Susi} във файла в произволен поток \end{DoxyCompactList}\item 
+\hyperlink{class_commands_a9c7815d0cedea1ccbac72eadc4bcab2d}{$\sim$\+Commands} ()=default
+\begin{DoxyCompactList}\small\item\em Деструктор по подразбиране \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_commands_a97f3494ce4d8e6a68ca2746b60decc37}{\+\_\+open} (std\+::string \&, int \&)
+\begin{DoxyCompactList}\small\item\em Отваря файл по дадена команда, като извлича параметрите дума по дума \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_commands_ad3d2136d6f9d46f62513fba7454b980f}{get\+Next\+C\+MD} (std\+::string \&, int \&)
+\begin{DoxyCompactList}\small\item\em Извлича параметър от дадена команда \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::fstream \hyperlink{class_commands_a9e7fe16e45925df6eb4c5d3ebcdf27d5}{file}
+\item 
+std\+::string \hyperlink{class_commands_ae66931a1748a7543fa6089f16e815ad2}{filename}
+\item 
+\hyperlink{class_susi}{Susi} \hyperlink{class_commands_a70ae07baccbd18977008ae6f17c6c32c}{system}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Класът се използва за работа с командният ред 
+
+Член-\/данни\+: fstream file, име на файл, обект \hyperlink{class_susi}{Susi} 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_commands_a5074950eaa028c7b44005a3c84870344}\label{class_commands_a5074950eaa028c7b44005a3c84870344}} 
+\index{Commands@{Commands}!Commands@{Commands}}
+\index{Commands@{Commands}!Commands@{Commands}}
+\subsubsection{\texorpdfstring{Commands()}{Commands()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Commands\+::\+Commands (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Конструктор по подразбиране 
+
+\mbox{\Hypertarget{class_commands_a50e97e2c1cc38b6b84252cac9af09f3d}\label{class_commands_a50e97e2c1cc38b6b84252cac9af09f3d}} 
+\index{Commands@{Commands}!Commands@{Commands}}
+\index{Commands@{Commands}!Commands@{Commands}}
+\subsubsection{\texorpdfstring{Commands()}{Commands()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Commands\+::\+Commands (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_commands_a9c7815d0cedea1ccbac72eadc4bcab2d}\label{class_commands_a9c7815d0cedea1ccbac72eadc4bcab2d}} 
+\index{Commands@{Commands}!````~Commands@{$\sim$\+Commands}}
+\index{````~Commands@{$\sim$\+Commands}!Commands@{Commands}}
+\subsubsection{\texorpdfstring{$\sim$\+Commands()}{~Commands()}}
+{\footnotesize\ttfamily Commands\+::$\sim$\+Commands (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Деструктор по подразбиране 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_commands_a97f3494ce4d8e6a68ca2746b60decc37}\label{class_commands_a97f3494ce4d8e6a68ca2746b60decc37}} 
+\index{Commands@{Commands}!\+\_\+open@{\+\_\+open}}
+\index{\+\_\+open@{\+\_\+open}!Commands@{Commands}}
+\subsubsection{\texorpdfstring{\+\_\+open()}{\_open()}}
+{\footnotesize\ttfamily void Commands\+::\+\_\+open (\begin{DoxyParamCaption}\item[{std\+::string \&}]{,  }\item[{int \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Отваря файл по дадена команда, като извлича параметрите дума по дума 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & команда \\
+\hline
+{\em int} & индекс, показващ до кой символ е стигнал обработването на командата \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_commands_ad3d2136d6f9d46f62513fba7454b980f}\label{class_commands_ad3d2136d6f9d46f62513fba7454b980f}} 
+\index{Commands@{Commands}!get\+Next\+C\+MD@{get\+Next\+C\+MD}}
+\index{get\+Next\+C\+MD@{get\+Next\+C\+MD}!Commands@{Commands}}
+\subsubsection{\texorpdfstring{get\+Next\+C\+M\+D()}{getNextCMD()}}
+{\footnotesize\ttfamily std\+::string Commands\+::get\+Next\+C\+MD (\begin{DoxyParamCaption}\item[{std\+::string \&}]{,  }\item[{int \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Извлича параметър от дадена команда 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & команда \\
+\hline
+{\em int} & индекс, показващ до кой символ е стигнал обработването на командата \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string текущият параметър от командата 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_commands_aa9562e12c94ab654035a1c08bc04f377}\label{class_commands_aa9562e12c94ab654035a1c08bc04f377}} 
+\index{Commands@{Commands}!process@{process}}
+\index{process@{process}!Commands@{Commands}}
+\subsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily void Commands\+::process (\begin{DoxyParamCaption}\item[{std\+::string \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Изпълнява командата получена от командния ред ако е правилна 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & команда \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_commands_acd316fdb9569d4b2a7860ca86d7af6c1}\label{class_commands_acd316fdb9569d4b2a7860ca86d7af6c1}} 
+\index{Commands@{Commands}!read@{read}}
+\index{read@{read}!Commands@{Commands}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void Commands\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Записва информацията от \hyperlink{class_susi}{Susi} във файла 
+
+\mbox{\Hypertarget{class_commands_a20c079b35574ed9f13dd29cee68f25f9}\label{class_commands_a20c079b35574ed9f13dd29cee68f25f9}} 
+\index{Commands@{Commands}!write@{write}}
+\index{write@{write}!Commands@{Commands}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Commands\+::write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Зарежда информацията от файла в обекта \hyperlink{class_susi}{Susi}. 
+
+\mbox{\Hypertarget{class_commands_a3a46d1e3934cfe1999476486473ad64c}\label{class_commands_a3a46d1e3934cfe1999476486473ad64c}} 
+\index{Commands@{Commands}!write@{write}}
+\index{write@{write}!Commands@{Commands}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Commands\+::write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})}
+
+
+
+Записва информацията от \hyperlink{class_susi}{Susi} във файла в произволен поток 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_commands_a9e7fe16e45925df6eb4c5d3ebcdf27d5}\label{class_commands_a9e7fe16e45925df6eb4c5d3ebcdf27d5}} 
+\index{Commands@{Commands}!file@{file}}
+\index{file@{file}!Commands@{Commands}}
+\subsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily std\+::fstream Commands\+::file\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_commands_ae66931a1748a7543fa6089f16e815ad2}\label{class_commands_ae66931a1748a7543fa6089f16e815ad2}} 
+\index{Commands@{Commands}!filename@{filename}}
+\index{filename@{filename}!Commands@{Commands}}
+\subsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily std\+::string Commands\+::filename\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_commands_a70ae07baccbd18977008ae6f17c6c32c}\label{class_commands_a70ae07baccbd18977008ae6f17c6c32c}} 
+\index{Commands@{Commands}!system@{system}}
+\index{system@{system}!Commands@{Commands}}
+\subsubsection{\texorpdfstring{system}{system}}
+{\footnotesize\ttfamily \hyperlink{class_susi}{Susi} Commands\+::system\hspace{0.3cm}{\ttfamily [private]}}
+
