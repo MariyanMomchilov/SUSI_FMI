@@ -203,11 +203,12 @@ void Student::print() const
 
     for (int i = 0; i < disciplines.size(); i++)
     {
-        std::cout << disciplines[i].getName() << ", ";
         if (i == disciplines.size() - 1)
         {
             std::cout << disciplines[i].getName();
         }
+        else
+            std::cout << disciplines[i].getName() << ", ";
     }
     std::cout << std::endl;
 }

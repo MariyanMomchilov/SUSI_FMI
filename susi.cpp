@@ -79,7 +79,7 @@ void Susi::advance(int fn)
     int i = _studentIndex(fn);
     if (i != -1)
     {
-        if (susi_students[i].canPass())
+        if (susi_students[i].canPass() && susi_students[i].getStatus() == 0)
         {
             susi_students[i].setYear(susi_students[i].getYear() + 1);
             std::cout << "Successful" << std::endl;
@@ -106,9 +106,9 @@ void Susi::addGrade(int fn, const std::string &course_name, int grade)
     int i = _studentIndex(fn);
     if (i > -1)
     {
-        if (susi_students[i].getStatus() == 1)
+        if (susi_students[i].getStatus() == 1 || susi_students[i].getStatus() == 2)
         {
-            std::cout << "This student dropped out" << '\n';
+            std::cout << "This student is not active" << '\n';
             return;
         }
         for (int j = 0; j < susi_disciplines.size(); j++)
@@ -229,7 +229,7 @@ void Susi::protocol(const std::string &course_name) const
         std::vector<Student> studentProt;
         for (int i = 0; i < susi_students.size(); i++)
         {
-            if (susi_students[i].isEnrolled(susi_disciplines[di]))
+            if (susi_students[i].isEnrolled(susi_disciplines[di]) && susi_students[i].getStatus() == 0)
             {
                 studentProt.push_back(susi_students[i]);
             }
@@ -249,7 +249,8 @@ void Susi::protocol(const std::string &course_name) const
                       << "FN: " << studentProt[i].getFnumber() << '\n'
                       << "Status: " << studentProt[i].getStatus() << '\n'
                       << "Year: " << studentProt[i].getYear() << '\n'
-                      << "Group: " << studentProt[i].getGroup() << '\n';
+                      << "Group: " << studentProt[i].getGroup() << '\n'
+                      << '\n';
             //mqsto za ocenka po predmeta eventualno
         }
     }
